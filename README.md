@@ -1,9 +1,5 @@
-# SimpleDev.Site
-Source code for my website at https://simpledev.site/
-
-![](screenshot.png)
-
-![](screenshot-mobile.png)
+# NEXTDEV
+Source code for my website at https://nextdev.in/
 
 ## Legal
 Copyright 2023 Syed Furquan Ahmad
