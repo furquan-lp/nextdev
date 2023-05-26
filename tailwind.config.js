@@ -7,12 +7,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'mountains-blur': "url('../public/blur-background.jpg')",
-        'mountains': "url('../public/background.jpg')"
+        'minimal-react': "url('../public/minimal-react.webp')"
       },
       fontFamily: {
-        'titlefont': ['Press\\ Start\\ 2P', 'monospace'],
-        'aboutfont': ['Comfortaa', 'monospace']
+        'logofont': ['Comfortaa', 'monospace'],
+        'aboutfont': ['Baloo\\ 2', 'cursive']
       },
       colors: {
         'blue-cpp': '#659ad2',
