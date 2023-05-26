@@ -3,7 +3,7 @@ import { SiJavascript } from 'react-icons/si';
 import { SiReact } from 'react-icons/si';
 import { SiTailwindcss } from 'react-icons/si';
 import { SiGatsby } from 'react-icons/si';
-import { SiMaterialui } from 'react-icons/si';
+import { SiMui } from 'react-icons/si';
 import { SiArduino } from 'react-icons/si';
 import { SiCplusplus } from 'react-icons/si';
 import { SiGnubash } from 'react-icons/si';
@@ -83,7 +83,7 @@ const resolvePTagIcon = (tech) => {
     case 'tailwind': return <SiTailwindcss className="mr-1" />;
     case 'flowbite': return <MdOutlineViewCarousel className="mr-1" />;
     case 'gatsby': return <SiGatsby className="mr-1" />;
-    case 'mui': return <SiMaterialui className="mr-1" />;
+    case 'mui': return <SiMui className="mr-1" />;
     case 'arduino': return <SiArduino className="mr-1" />;
     case 'cpp': return <SiCplusplus className="mr-1" />;
     case 'bash': return <SiGnubash className="mr-1" />;
