@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const HomeLogo = ({ path }) =>
-  <div className="font-logofont md:text-2xl p-2 m-1 text-slate-800 outline-1 border-solid">
+  <div className="font-logofont md:text-2xl p-2 m-1 text-slate-800 outline-1">
     <b>NEXT</b>DEV.IN // HOME
   </div>;
 
