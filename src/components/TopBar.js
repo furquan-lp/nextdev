@@ -47,7 +47,7 @@ const TopBar = ({ page }) => {
       <Link to="/"><HomeLogo path={page} /></Link>
       <div className={`flex items-center m-2 p-2 md:hidden rounded-sm transition-colors duration-200 border
        border-slate-300 ${menuStyle}`}
-        onClick={() => setNav(!navButtonToggled)}>
+        onClick={() => setTimeout(() => setNav(!navButtonToggled), 50)}>
         <FiMenu />
       </div>
     </div>
