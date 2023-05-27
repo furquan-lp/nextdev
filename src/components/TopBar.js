@@ -28,7 +28,7 @@ const TopBarButton = ({ link, linktext, extern }) => {
 const TopBarLinks = ({ navToggled }) => {
   if (navToggled)
     return <ul className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0
-     fade-in-element md:transition-none">
+     fade-in-element">
       <TopBarButton link="/" linktext="Home" />
       <TopBarButton link="/about" linktext="About" />
       <TopBarButton link="https://tctp.xyz/" linktext="Blog" extern={true} />
@@ -44,7 +44,8 @@ const TopBar = ({ page }) => {
   return <div className="flex flex-col md:flex-row justify-between text-slate-800 bg-white p-1 border">
     <div className="flex flex-row justify-between">
       <Link to="/"><HomeLogo path={page} /></Link>
-      <div className={`flex items-center m-2 p-2 md:hidden rounded-sm border border-slate-300 ${menuStyle}`}
+      <div className={`flex items-center m-2 p-2 md:hidden rounded-sm transition-colors duration-200 border
+       border-slate-300 ${menuStyle}`}
         onClick={() => setNav(!navButtonToggled)}>
         <FiMenu />
       </div>
