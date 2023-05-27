@@ -36,13 +36,14 @@ const TopBarLinks = () =>
   </ul>;
 
 const TopBar = ({ page }) => {
-  const [navButtonToggled, setNav] = useState(1);
-  const menuStyle = navButtonToggled ? 'border-0 text-white bg-slate-500' : '';
+  const [navButtonToggled, setNav] = useState(0);
+  const menuStyle = navButtonToggled ? 'border-0 text-white bg-slate-500' : 'active:bg-slate-200';
 
   return <div className="flex flex-col md:flex-row justify-between text-slate-800 bg-white pb-2 md:p-1 border">
     <div className="flex flex-row justify-between">
       <Link to="/"><HomeLogo path={page} /></Link>
-      <div className={`flex items-center m-2 p-2 md:hidden rounded-sm border ${menuStyle}`}>
+      <div className={`flex items-center m-2 p-2 md:hidden rounded-sm border ${menuStyle}`}
+        onClick={() => setNav(!navButtonToggled)}>
         <FiMenu />
       </div>
     </div>
