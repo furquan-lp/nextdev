@@ -29,11 +29,11 @@ code {
 
 
 .fade-in-element {
-  animation: fadeIn 0.3s;
-  -webkit-animation: fadeIn 0.3s;
-  -moz-animation: fadeIn 0.3s;
-  -o-animation: fadeIn 0.3s;
-  -ms-animation: fadeIn 0.3s;
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
 }
 
 @keyframes fadeIn {
