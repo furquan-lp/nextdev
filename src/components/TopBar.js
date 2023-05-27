@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { FiMenu } from 'react-icons/fi';
 
 const HomeLogo = ({ path }) =>
@@ -28,7 +27,8 @@ const TopBarButton = ({ link, linktext, extern }) => {
 
 const TopBarLinks = ({ navToggled }) => {
   if (navToggled)
-    return <ul className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0">
+    return <ul className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0
+     fade-in-element md:transition-none">
       <TopBarButton link="/" linktext="Home" />
       <TopBarButton link="/about" linktext="About" />
       <TopBarButton link="https://tctp.xyz/" linktext="Blog" extern={true} />
@@ -38,7 +38,7 @@ const TopBarLinks = ({ navToggled }) => {
 };
 
 const TopBar = ({ page }) => {
-  const [navButtonToggled, setNav] = useState(0);
+  const [navButtonToggled, setNav] = useState(1);
   const menuStyle = navButtonToggled ? 'border-0 text-white bg-slate-500 active:bg-slate-600' : 'active:bg-slate-200';
 
   return <div className="flex flex-col md:flex-row justify-between text-slate-800 bg-white p-1 border">
