@@ -44,7 +44,7 @@ const TopBar = ({ page }) => {
   return <div className="flex flex-col md:flex-row justify-between text-slate-800 bg-white p-1 border">
     <div className="flex flex-row justify-between">
       <Link to="/"><HomeLogo path={page} /></Link>
-      <div className={`flex items-center m-2 p-2 md:hidden rounded-sm border ${menuStyle}`}
+      <div className={`flex items-center m-2 p-2 md:hidden rounded-sm border border-slate-300 ${menuStyle}`}
         onClick={() => setNav(!navButtonToggled)}>
         <FiMenu />
       </div>
