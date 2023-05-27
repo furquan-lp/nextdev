@@ -4,8 +4,8 @@ import { FiMenu } from 'react-icons/fi';
 
 const HomeLogo = ({ path }) =>
   <div className="font-logofont md:text-2xl p-2 m-1 text-slate-800 outline-1">
-    <span className="home-logo-ul"><span className="font-bold underline md:no-underline">NEXT</span>DEV.IN</span> //
-    HOME
+    <span className="home-logo-ul"><span className="font-bold underline md:no-underline">NEXT</span>DEV.IN</span>
+    {` // ${path.toUpperCase()}`}
   </div>;
 
 const TopBarButton = ({ link, linktext, extern }) => {
