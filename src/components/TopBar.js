@@ -26,14 +26,16 @@ const TopBarButton = ({ link, linktext, extern }) => {
   }
 };
 
-const TopBarLinks = () =>
-  <ul className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0">
-    <TopBarButton link="/" linktext="Home" />
-    <TopBarButton link="/about" linktext="About" />
-    <TopBarButton link="https://tctp.xyz/" linktext="Blog" extern={true} />
-    <TopBarButton link="/portfolio" linktext="Portfolio" />
-    <TopBarButton link="/contact" linktext="Contact" />
-  </ul>;
+const TopBarLinks = ({ navToggled }) => {
+  if (navToggled)
+    return <ul className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0">
+      <TopBarButton link="/" linktext="Home" />
+      <TopBarButton link="/about" linktext="About" />
+      <TopBarButton link="https://tctp.xyz/" linktext="Blog" extern={true} />
+      <TopBarButton link="/portfolio" linktext="Portfolio" />
+      <TopBarButton link="/contact" linktext="Contact" />
+    </ul>;
+};
 
 const TopBar = ({ page }) => {
   const [navButtonToggled, setNav] = useState(0);
@@ -47,7 +49,7 @@ const TopBar = ({ page }) => {
         <FiMenu />
       </div>
     </div>
-    <TopBarLinks />
+    <TopBarLinks navToggled={navButtonToggled} />
   </div>;
 };
 
