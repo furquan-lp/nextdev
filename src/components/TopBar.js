@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 const HomeLogo = ({ path }) =>
   <div className="font-logofont md:text-2xl p-2 m-1 text-slate-800 outline-1">
-    <b>NEXT</b>DEV.IN // HOME
+    <span className="home-logo-ul"><b>NEXT</b>DEV.IN</span> // HOME
   </div>;
 
 const TopBarButton = ({ link, linktext, extern, styles }) => {
   const buttonStyle = {
     link: styles ? `text-slate-800 ${styles}` : `text-slate-800`,
-    li: `inline md:m-1 m-px md:p-3 p-1 tracking-widest hover:text-white-light hover:bg-slate-600 transition-all
+    li: `inline md:m-1 m-px md:p-3 p-1 tracking-widest hover:underline hover:text-white-light hover:bg-slate-600 transition-all
      duration-200`
   };
   if (extern) {
@@ -27,8 +27,7 @@ const TopBarButton = ({ link, linktext, extern, styles }) => {
 };
 
 const TopBar = ({ page }) =>
-  <div className="flex flex-wrap md:flex-nowrap justify-between text-slate-800 pb-2 md:p-1 md:m-1.5 m-px
-   rounded-md ">
+  <div className="flex flex-wrap md:flex-nowrap justify-between text-slate-800 bg-white pb-2 md:p-1 border">
     <Link to="/"><HomeLogo path={page} /></Link>
     <ul className="flex items-center list-none text-sm md:text-base md:m-1 p-0">
       <TopBarButton link="/" linktext="Home" styles="hidden md:inline" />
