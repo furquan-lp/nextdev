@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 
 const HomeLogo = ({ path }) =>
-  <div className="font-logofont md:text-2xl p-2 m-1 text-slate-800 outline-1">
+  <div className="font-logofont text-xl md:text-2xl p-2 m-1 text-slate-800 outline-1">
     <span className="home-logo-ul select-none">
       <span className="font-bold underline md:no-underline">NEXT</span>
       DEV.IN
