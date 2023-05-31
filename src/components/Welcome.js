@@ -71,6 +71,7 @@ const MyCarousel = () => {
       )}
       autoplay={true}
       loop={true}
+      navigation={false}
     >
       <CarouselCard title="Check out my blog!"
         text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
