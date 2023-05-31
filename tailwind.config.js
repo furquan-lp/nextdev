@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+const colors = require('tailwindcss/colors');
+
+module.exports = withMT({
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
+    "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
@@ -11,7 +13,8 @@ module.exports = {
       },
       fontFamily: {
         'logofont': ['Comfortaa', 'monospace'],
-        'aboutfont': ['Baloo\\ 2', 'cursive']
+        'aboutfont': ['Baloo\\ 2', 'cursive'],
+        'cardtitle': ['Roboto', 'sans-serif']
       },
       colors: {
         'blue-cpp': '#659ad2',
@@ -27,11 +30,10 @@ module.exports = {
         'green-new': '#35bcbf',
         'purple-gatsby': '#663399',
         'white-light': '#eeeeee',
-        'yellow-js': '#f0db4f'
+        'yellow-js': '#f0db4f',
+        ...colors
       }
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
-}
+  plugins: [],
+});

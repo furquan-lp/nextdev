@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 
 const HomeLogo = ({ path }) =>
-  <div className="font-logofont md:text-2xl p-2 m-1 text-slate-800 outline-1">
+  <div className="font-logofont text-xl md:text-2xl p-2 m-1 text-slate-800 outline-1">
     <span className="home-logo-ul select-none">
       <span className="font-bold underline md:no-underline">NEXT</span>
       DEV.IN
@@ -15,14 +15,14 @@ const TopBarButton = ({ link, linktext, extern }) => {
   if (extern) {
     return <a href={link} className="text-slate-800 m-1">
       <li className="inline md:p-3 p-1 tracking-widest hover:underline hover:text-white-light
-       hover:bg-slate-600 active:bg-slate-500 transition-all duration-200">
+       hover:bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
         {linktext}
       </li>
     </a>;
   } else {
     return <Link className="text-slate-800 m-1" to={link}>
       <li className="inline md:p-3 p-1 tracking-widest hover:underline hover:text-white-light
-       hover:bg-slate-600 active:bg-slate-500 transition-all duration-200">
+       hover:bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
         {linktext}
       </li>
     </Link>;
