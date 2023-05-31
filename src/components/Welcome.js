@@ -61,7 +61,7 @@ const WelcomeCarousel = () =>
 const MyCarousel = () => {
   return (
     <Carousel
-      className="h-96"
+      className="h-96 my-4 overflow-hidden"
       prevArrow={({ handlePrev }) => (
 
         <CarouselButton onClick={handlePrev} nav={0} />
