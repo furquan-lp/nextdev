@@ -103,8 +103,8 @@ const MyCarousel = () => {
       />
       <CarouselCard title="Arduino, Microcontrollers and Other Iot Stuff"
         tags={["arduino", "IoT", "backend"]}
-        text="Two years ago I was working on a project to log environmental data and display it to an LCD screen. Later
-         on I ported the code over to an ESP32 board which was used as the backend for WebEnv."
+        text="Two years ago I worked on a project to log environmental data and display it to an LCD screen. Later
+         I ported the code to an ESP32 board which was used as the backend for WebEnv."
         buttonLink="https://github.com/furquan-lp/environment-monitor"
         buttonText="Check out the source code"
         image={iotImg}
