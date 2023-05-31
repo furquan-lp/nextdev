@@ -7,12 +7,13 @@ import tctpImg from '../assets/tctp-screenshot-chrome.webp';
 import iotImg from '../assets/device.gif';
 import githubImg from '../assets/github-screenshot.webp';
 
-const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
-  <div className="flex mx-px my-px">
-    <img className="md:w-6/12 w-full h-96" src={image}
+const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
+  <div className="flex mx-px my-px flex-wrap md:flex-nowrap">
+    <img className="md:w-6/12 w-full md:h-96 h-auto" src={image}
       alt={`${title} screenshot"`} />
-    <div className="flex flex-col items-center m-4">
-      <span className="font-cardtitle text-4xl font-bold">{title}</span>
+    <div className="flex flex-col m-4">
+      <span className="font-cardtitle text-xl my-2 font-bold">{tags.map(e => <span className="m-1 text-red-600">#{e}</span>)}</span>
+      <span className="font-cardtitle text-4xl">{title}</span>
     </div>
   </div>;
 
@@ -77,6 +78,7 @@ const MyCarousel = () => {
       navigation={false}
     >
       <CarouselCard title="The Chip Tinker Project - A Gatsby Blog"
+        tags={["web", "gatsby", "react"]}
         text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
          Netlify backend. Thanks to Tailwind CSS it has a mobile first design and it uses Netlify CMS which helps me
          push out blog posts without having to mess with the internal Markdown."
@@ -85,6 +87,7 @@ const MyCarousel = () => {
         image={tctpImg}
       />
       <CarouselCard title="Webenv - A React Native App on an Iot Backend"
+        tags={["react", "mobile", "IoT"]}
         text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data.
          Available for Android, iOS and the web. The IoT backend is powered by an ESP32 microcontroller which exposes a
          JSON API over an HTTP server (hosted on the microcontroller itself!)."
@@ -93,6 +96,7 @@ const MyCarousel = () => {
         image={webenvImg}
       />
       <CarouselCard title="Arduino, Microcontrollers and Other Iot Stuff"
+        tags={["arduino", "IoT", "backend"]}
         text="Two years ago I was working on a project to log environmental data (air quality, temperature, humidity,
          etc.) and display it to an LCD screen. Later on I ported the code over to an ESP32 board which served the
          data over LAN WiFi called 'envmon'. A minimal version which forwarded the data over the Internet to a JSON
@@ -102,6 +106,7 @@ const MyCarousel = () => {
         image={iotImg}
       />
       <CarouselCard title="Check Out My Github for More Updates"
+        tags={["web", "development"]}
         text="If you want to check the source code for all my projects and want to see what I'm up to then head over
          here. I commit frequently but no guarantees regarding documentation ;-)"
         buttonLink="https://github.com/furquan-lp"
