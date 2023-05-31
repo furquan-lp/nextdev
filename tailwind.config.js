@@ -13,7 +13,8 @@ module.exports = withMT({
       },
       fontFamily: {
         'logofont': ['Comfortaa', 'monospace'],
-        'aboutfont': ['Baloo\\ 2', 'cursive']
+        'aboutfont': ['Baloo\\ 2', 'cursive'],
+        'cardtitle': ['Roboto', 'sans-serif']
       },
       colors: {
         'blue-cpp': '#659ad2',
