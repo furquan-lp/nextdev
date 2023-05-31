@@ -11,6 +11,9 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
   <div className="flex mx-px my-px">
     <img className="md:w-6/12 w-full h-96" src={image}
       alt={`${title} screenshot"`} />
+    <div className="flex flex-col items-center m-4">
+      <span className="font-cardtitle text-4xl font-bold">{title}</span>
+    </div>
   </div>;
 
 /**
@@ -61,7 +64,7 @@ const WelcomeCarousel = () =>
 const MyCarousel = () => {
   return (
     <Carousel
-      className="h-96 my-4 overflow-hidden"
+      className="h-4/6 my-4 overflow-hidden"
       prevArrow={({ handlePrev }) => (
 
         <CarouselButton onClick={handlePrev} nav={0} />
