@@ -74,7 +74,7 @@ const WelcomeCarousel = () =>
 const MyCarousel = () => {
   return (
     <Carousel
-      className="h-4/6 my-4 overflow-hidden"
+      className="h-4/6 my-4 overflow-hidden shadow-lg"
       prevArrow={({ handlePrev }) => (
 
         <CarouselButton onClick={handlePrev} nav={0} />
@@ -97,7 +97,7 @@ const MyCarousel = () => {
       <CarouselCard title="Webenv - A React Native App on an Iot Backend"
         tags={["react", "mobile", "IoT"]}
         text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data."
-        buttonLink="http://webenv.simpledev.site"
+        buttonLink="http://webenv.nextdev.in"
         buttonText="Check out the live demo"
         image={webenvImg}
       />
