@@ -1,6 +1,6 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight, FiExternalLink } from "react-icons/fi";
 
 import webenvImg from '../assets/webenv-screenshot.webp';
 import tctpImg from '../assets/tctp-screenshot-chrome.webp';
@@ -19,7 +19,9 @@ const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
         <span className="font-cardtitle text-3xl md:text-5xl">{title}</span>
         <span className="text-xl md:text-3xl mt-2 font-light">{text}</span>
       </div>
-      <a href={buttonLink} className="flex mr-auto mt-1 text-xl p-2 border hover:underline">{buttonText}</a>
+      <a href={buttonLink} className="flex mr-auto mt-1 text-xl p-2 border hover:underline items-center">
+        {buttonText}<FiExternalLink className="ml-1" />
+      </a>
     </div>
   </div>;
 
