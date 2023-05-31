@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat">
       <TopBar page="home" />
-      <div className="flex flex-col md:mx-12">
+      <div className="flex flex-col md:mx-20">
         <WelcomeCarousel />
         <div className="font-sans font-bold text-slate-600 md:text-2xl text-lg mx-4 lg:p-10 p-4 ">This website
           is built using:
