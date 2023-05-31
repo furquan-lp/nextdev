@@ -4,13 +4,16 @@ import { MdOutlineViewCarousel } from 'react-icons/md';
 
 import TopBar from '../components/TopBar';
 import WelcomeCarousel from '../components/Welcome';
+import HiBox from '../components/HiBox';
 
 const Home = () => {
+
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat">
       <TopBar page="home" />
-      <div className="flex flex-col md:mx-20">
+      <div className="flex flex-col md:mx-24">
         <WelcomeCarousel />
+        <HiBox />
         <div className="font-sans font-bold text-slate-600 md:text-2xl text-lg mx-4 lg:p-10 p-4 ">This website
           is built using:
           <div className="flex flex-col mb-5 font-normal">
