@@ -19,7 +19,8 @@ const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
         <span className="font-cardtitle text-3xl md:text-5xl">{title}</span>
         <span className="text-xl md:text-3xl mt-2 font-light">{text}</span>
       </div>
-      <a href={buttonLink} className="flex mr-auto mt-1 text-xl p-2 border hover:underline items-center">
+      <a href={buttonLink} className="flex mr-auto mt-1 text-xl p-1.5 border border-slate-400 hover:underline
+       hover:bg-slate-600 hover:text-white items-center transition-all duration-200">
         {buttonText}<FiExternalLink className="ml-1" />
       </a>
     </div>
