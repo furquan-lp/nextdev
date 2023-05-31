@@ -76,7 +76,7 @@ const MyCarousel = () => {
       loop={true}
       navigation={false}
     >
-      <CarouselCard title="Check out my blog!"
+      <CarouselCard title="The Chip Tinker Project - A Gatsby Blog"
         text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
          Netlify backend. Thanks to Tailwind CSS it has a mobile first design and it uses Netlify CMS which helps me
          push out blog posts without having to mess with the internal Markdown."
@@ -84,7 +84,7 @@ const MyCarousel = () => {
         buttonText="Visit site"
         image={tctpImg}
       />
-      <CarouselCard title="Check out my app!"
+      <CarouselCard title="Webenv - A React Native App on an Iot Backend"
         text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data.
          Available for Android, iOS and the web. The IoT backend is powered by an ESP32 microcontroller which exposes a
          JSON API over an HTTP server (hosted on the microcontroller itself!)."
@@ -92,14 +92,7 @@ const MyCarousel = () => {
         buttonText="Check out the live demo"
         image={webenvImg}
       />
-      <CarouselCard title="Check out my GitHub!"
-        text="If you want to check the source code for all my projects and want to see what I'm up to then head over
-         here. I commit frequently but no guarantees regarding documentation ;-)"
-        buttonLink="https://github.com/furquan-lp"
-        buttonText="Visit my GitHub"
-        image={githubImg}
-      />
-      <CarouselCard title="Arduino and IoT stuff"
+      <CarouselCard title="Arduino, Microcontrollers and Other Iot Stuff"
         text="Two years ago I was working on a project to log environmental data (air quality, temperature, humidity,
          etc.) and display it to an LCD screen. Later on I ported the code over to an ESP32 board which served the
          data over LAN WiFi called 'envmon'. A minimal version which forwarded the data over the Internet to a JSON
@@ -107,6 +100,13 @@ const MyCarousel = () => {
         buttonLink="https://github.com/furquan-lp/environment-monitor"
         buttonText="Check out the source code"
         image={iotImg}
+      />
+      <CarouselCard title="Check Out My Github for More Updates"
+        text="If you want to check the source code for all my projects and want to see what I'm up to then head over
+         here. I commit frequently but no guarantees regarding documentation ;-)"
+        buttonLink="https://github.com/furquan-lp"
+        buttonText="Visit my GitHub"
+        image={githubImg}
       />
     </Carousel>
   )
