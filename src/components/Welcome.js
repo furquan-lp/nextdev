@@ -69,6 +69,8 @@ const MyCarousel = () => {
       nextArrow={({ handleNext }) => (
         <CarouselButton onClick={handleNext} nav={1} />
       )}
+      autoplay={true}
+      loop={true}
     >
       <CarouselCard title="Check out my blog!"
         text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
