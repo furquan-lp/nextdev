@@ -71,7 +71,14 @@ const WelcomeCarousel = () =>
   </div >;
 */
 
-const MyCarousel = () => {
+const CarouselButton = ({ onClick, nav }) =>
+  <div className={`${nav === 0 ? '!absolute top-2/4 -translate-y-2/4 left-1' :
+    '!absolute top-2/4 -translate-y-2/4 !right-1'} p-2 md:p-3 rounded-full text-xl text-slate-100 cursor-pointer
+    bg-slate-600/50 hover:text-blue-200 hover:bg-slate-600/70 transition-colors duration-100`} onClick={onClick}>
+    {nav === 0 ? <FiChevronLeft /> : <FiChevronRight />}
+  </div>;
+
+const WelcomeCarousel = () => {
   return (
     <Carousel
       className="h-4/6 my-1 md:my-4 overflow-hidden shadow-lg"
@@ -121,17 +128,10 @@ const MyCarousel = () => {
   )
 }
 
-const CarouselButton = ({ onClick, nav }) =>
-  <div className={`${nav === 0 ? '!absolute top-2/4 -translate-y-2/4 left-1' :
-    '!absolute top-2/4 -translate-y-2/4 !right-1'} p-2 md:p-3 rounded-full text-xl text-slate-100 cursor-pointer
-    bg-slate-600/50 hover:text-blue-200 hover:bg-slate-600/70 transition-colors duration-100`} onClick={onClick}>
-    {nav === 0 ? <FiChevronLeft /> : <FiChevronRight />}
-  </div>;
-
 
 const Welcome = () => {
   return (
-    <MyCarousel />
+    <WelcomeCarousel />
   );
 };
 
