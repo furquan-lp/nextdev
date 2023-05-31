@@ -8,15 +8,18 @@ import iotImg from '../assets/device.gif';
 import githubImg from '../assets/github-screenshot.webp';
 
 const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
-  <div className="flex mx-px my-px flex-wrap md:flex-nowrap bg-white/80">
+  <div className="flex mx-px my-px flex-wrap md:flex-nowrap bg-white/80 text-slate-700">
     <img className="md:w-6/12 w-full md:h-96 h-auto" src={image}
       alt={`${title} screenshot"`} />
-    <div className="flex flex-col m-4 max-w-3xl">
-      <span className="font-cardtitle text-xl my-2 font-bold">
-        {tags.map(e => <span className="m-1 text-red-600">#{e}</span>)}
-      </span>
-      <span className="font-cardtitle text-3xl md:text-5xl">{title}</span>
-      <span className="text-xl md:text-3xl mt-5 font-light">{text}</span>
+    <div className="flex flex-col m-4 max-w-3xl justify-between">
+      <div className="flex flex-col">
+        <span className="font-cardtitle text-xl my-2 font-bold">
+          {tags.map(e => <span className="m-1 text-red-600">#{e}</span>)}
+        </span>
+        <span className="font-cardtitle text-3xl md:text-5xl">{title}</span>
+        <span className="text-xl md:text-3xl mt-2 font-light">{text}</span>
+      </div>
+      <a href={buttonLink} className="flex mr-auto mt-1 text-xl p-2 border hover:underline">{buttonText}</a>
     </div>
   </div>;
 
