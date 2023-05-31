@@ -7,7 +7,7 @@ import iotImg from '../assets/device.gif';
 import githubImg from '../assets/github-screenshot.webp';
 
 const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
-  <div className="flex mx-px my-px flex-wrap md:flex-nowrap bg-white/90 text-slate-700">
+  <div className="flex mx-px my-px flex-col md:flex-row bg-white/90 text-slate-700">
     <img className="md:w-6/12 w-full md:h-96 h-auto" src={image}
       alt={`${title} screenshot"`} />
     <div className="flex flex-col m-4 max-w-3xl justify-between">
@@ -18,9 +18,9 @@ const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
         <span className="font-cardtitle text-3xl md:text-5xl">{title}</span>
         <span className="text-xl md:text-3xl mt-2 font-light">{text}</span>
       </div>
-      <a href={buttonLink} className="flex mr-auto mt-1 text-xl p-1.5 border border-slate-400 hover:underline
-       hover:bg-slate-600 hover:text-white hover:border-slate-600 active:bg-slate-500 active:border-slate-500
-        items-center transition-all duration-200">
+      <a href={buttonLink} className="flex mr-auto mt-1 text-lg md:text-xl p-1 md:p-1.5 border border-slate-400
+       hover:underline hover:bg-slate-600 hover:text-white hover:border-slate-600 active:bg-slate-500
+        active:border-slate-500 active:text-white items-center transition-all duration-200">
         {buttonText}<FiExternalLink className="ml-1" />
       </a>
     </div>
@@ -74,7 +74,7 @@ const WelcomeCarousel = () =>
 const MyCarousel = () => {
   return (
     <Carousel
-      className="h-4/6 my-4 overflow-hidden shadow-lg"
+      className="h-4/6 my-1 md:my-4 overflow-hidden shadow-lg"
       prevArrow={({ handlePrev }) => (
 
         <CarouselButton onClick={handlePrev} nav={0} />
