@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import AboutSite from '../components/AboutSite';
 
 const Home = () => {
-
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat ">
       <TopBar page="home" highlight={[true, false, false, false, false]} />
