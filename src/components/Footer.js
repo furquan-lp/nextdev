@@ -6,7 +6,7 @@ text-slate-600 p-1.5 border border-slate-300">
   <div>
     <span className="hidden md:inline">Powered by GitHub Pages.</span> <a className="underline decoration-slate-600
     md:decoration-transparent md:hover:decoration-slate-600 transition-all duration-200"
-      href="https://github.com/furquan-lp/simpledev.site/blob/master/LICENSE">
+      href="https://github.com/furquan-lp/nextdev/blob/master/LICENSE">
       Copyright &#169; 2023 Syed Furquan Ahmad.</a>
   </div>
   <Tooltip content="Check the source code">
