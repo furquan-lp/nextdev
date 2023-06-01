@@ -1,62 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="32mm"
-   height="32mm"
-   viewBox="0 0 32 32"
-   version="1.1"
-   id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="favicon.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:document-units="mm"
-     showgrid="false"
-     width="32mm"
-     objecttolerance="20"
-     inkscape:zoom="3.4620853"
-     inkscape:cx="84.919919"
-     inkscape:cy="56.468858"
-     inkscape:window-width="1600"
-     inkscape:window-height="874"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs2" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <rect
-       style="fill:#263849;fill-opacity:1;stroke:#90f6d7;stroke-width:0.419;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect870"
-       width="31.573572"
-       height="31.573307"
-       x="0.21559413"
-       y="0.214552" />
-    <text
-       xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:C-64;-inkscape-font-specification:C-64;fill:#90f6d7;fill-opacity:1;stroke-width:0.264583"
-       x="1.0775083"
-       y="27.37709"
-       id="text5097"><tspan
-         sodipodi:role="line"
-         id="tspan5095"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:'IBM 3270 Condensed';-inkscape-font-specification:'IBM 3270 Condensed, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#90f6d7;fill-opacity:1;stroke-width:0.264583"
-         x="1.0775083"
-         y="27.37709">S.</tspan></text>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.4469" y="1.4214" width="125.21" height="125.23" fill="#222" stroke="#434242" stroke-width="2.6854"/>
+<text x="12.398708" y="90.865715" fill="#f3efe0" font-family="FreeMono" font-size="120px" style="line-height:1.25" xml:space="preserve"><tspan x="12.398708" y="90.865715" font-family="FreeMono" font-size="120px">N<tspan font-family="FreeSans">.</tspan></tspan></text>
+<text x="7.3152103" y="116.22162" font-family="FreeSans" font-size="24px" letter-spacing="2px" style="line-height:1.25" xml:space="preserve"><tspan x="7.3152103" y="116.22162" fill="#f3efe0" font-family="FreeMono">NEXTDEV</tspan></text>
 </svg>
