@@ -1,12 +1,9 @@
-import preval from 'preval.macro';
-import { SiReact, SiTailwindcss } from 'react-icons/si';
-import { MdOutlineViewCarousel } from 'react-icons/md';
-
 import TopBar from '../components/TopBar';
 import WelcomeCarousel from '../components/Welcome';
 import HiBox from '../components/HiBox';
 import Bar from '../components/Bar';
 import Footer from '../components/Footer';
+import AboutSite from '../components/AboutSite';
 
 const Home = () => {
 
@@ -18,6 +15,7 @@ const Home = () => {
         <Bar />
         <HiBox />
         <Bar />
+        <AboutSite />
       </div>
       <Footer />
     </div>
