@@ -9,6 +9,9 @@
    id="SVGRoot"
    sodipodi:docname="nextdev-logo.svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="nextdev-logo.png"
+   inkscape:export-xdpi="384"
+   inkscape:export-ydpi="384"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="4.3137482"
-     inkscape:cx="3.8249799"
-     inkscape:cy="62.011038"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="60.192465"
+     inkscape:cy="58.247921"
      inkscape:window-width="1920"
      inkscape:window-height="1053"
      inkscape:window-x="0"
@@ -44,12 +47,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#222222;stroke:#434242;stroke-width:2.68084;fill-opacity:1;stroke-opacity:1"
+       style="fill:#222222;fill-opacity:1;stroke:#434242;stroke-width:2.68536;stroke-opacity:1"
        id="rect493"
-       width="124.89318"
-       height="125.12688"
-       x="1.528928"
-       y="1.375026" />
+       width="125.21062"
+       height="125.23121"
+       x="1.446884"
+       y="1.4213679" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:120px;line-height:1.25;font-family:FreeMono;-inkscape-font-specification:FreeMono;fill:#f3efe0;fill-opacity:1"
