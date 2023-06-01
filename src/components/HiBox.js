@@ -21,13 +21,13 @@ const HiBox = () =>
     <div className="flex flex-col text-3xl md:text-5xl my-2 mx-1 md:mx-0 px-8 py-4 md:my-5 md:ml-5 md:px-20 md:py-10
      flex-grow font-cardtitle bg-white/95 shadow-lg border border-slate-100">
       <Link to="/about" className="flex italic mb-4 self-center hover:text-slate-600 transition-colors duration-200
-       about-u-animation">
+       underline md:no-underline about-u-animation">
         <MdKeyboardDoubleArrowRight />About Me
       </Link>
-      <div className="flex justify-center font-aboutmono text-teal-600 text-3xl typewriter ">//---Coder---//</div>
-      <div className="flex justify-center font-aboutmono text-orange-600 text-3xl typewriter ">//--Tinkerer--//</div>
-      <div className="flex justify-center font-aboutmono text-green-600 text-3xl typewriter ">//---Hacker---//</div>
-      <div className="flex justify-center font-aboutmono text-3xl mt-5 lineUp ">
+      <div className="flex justify-center font-aboutmono text-teal-600 text-3xl typewriter">//---Coder---//</div>
+      <div className="flex justify-center font-aboutmono text-orange-600 text-3xl typewriter">//--Tinkerer--//</div>
+      <div className="flex justify-center font-aboutmono text-green-600 text-3xl typewriter">//---Hacker---//</div>
+      <div className="flex justify-center font-aboutmono text-3xl mt-5 lineUp">
         The next developer for your organization?
       </div>
       <div className='self-center'>
