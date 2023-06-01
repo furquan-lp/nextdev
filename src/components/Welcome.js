@@ -13,7 +13,7 @@ const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
     <div className="flex flex-col m-4 max-w-3xl justify-between">
       <div className="flex flex-col">
         <span className="font-cardtitle text-xl my-2 font-bold">
-          {tags.map(e => <span className="m-1 text-red-600">#{e}</span>)}
+          {tags.map((e, i) => <span className="m-1 text-red-600" key={buttonLink + e + i}>#{e}</span>)}
         </span>
         <span className="font-cardtitle text-3xl md:text-5xl">{title}</span>
         <span className="text-xl md:text-2xl mt-2 font-light">{text}</span>
