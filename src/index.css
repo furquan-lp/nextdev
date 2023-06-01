@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa&family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa&family=Roboto:wght@100;300;400;700&family=Ubuntu+Mono:ital@0;1&display=swap');
 
 body {
   margin: 0;
@@ -17,16 +17,94 @@ code {
     monospace;
 }
 
-.home-logo-ul {
+.home-logo-u {
   background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
   text-decoration: none;
   transition: background-size 500ms;
 }
 
-.home-logo-ul:hover {
+.home-logo-u:hover {
   --underline-width: 100%;
 }
 
+.about-u-animation {
+  position: relative;
+}
+
+.about-u-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #475569;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.about-u-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #3b82f6;
+  white-space: nowrap;
+  margin: 1rem auto;
+  animation:
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #3b82f6;
+  }
+}
+
+.lineUp {
+  animation: 4s anim-lineUp ease-out 1;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
 .fade-in-element {
   animation: fadeIn 0.5s;

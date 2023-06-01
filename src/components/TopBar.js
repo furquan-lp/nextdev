@@ -4,44 +4,54 @@ import { FiMenu } from 'react-icons/fi';
 
 const HomeLogo = ({ path }) =>
   <div className="font-logofont text-xl md:text-2xl p-2 m-1 text-slate-800 outline-1">
-    <span className="home-logo-ul select-none">
+    <span className="home-logo-u select-none">
       <span className="font-bold underline md:no-underline">NEXT</span>
       DEV.IN
     </span>
     {` // ${path.toUpperCase()}`}
   </div>;
 
-const TopBarButton = ({ link, linktext, extern }) => {
-  if (extern) {
-    return <a href={link} className="text-slate-800 m-1">
+const GrayButton = ({ text, highlight }) => {
+  console.log(text, 'for', highlight)
+  if (highlight) {
+    return (<li className="inline md:p-3 p-1 tracking-widest hover:underline text-white-light
+  bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
+      {text}
+    </li>);
+  } else {
+    return (
       <li className="inline md:p-3 p-1 tracking-widest hover:underline hover:text-white-light
        hover:bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
-        {linktext}
-      </li>
+        {text}
+      </li>);
+  }
+}
+
+const TopBarButton = ({ link, linktext, extern, highlight }) => {
+  if (extern) {
+    return <a href={link} className="text-slate-800 m-1">
+      <GrayButton text={linktext} highlight={highlight} />
     </a>;
   } else {
     return <Link className="text-slate-800 m-1" to={link}>
-      <li className="inline md:p-3 p-1 tracking-widest hover:underline hover:text-white-light
-       hover:bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
-        {linktext}
-      </li>
+      <GrayButton text={linktext} highlight={highlight} />
     </Link>;
   }
 };
 
-const TopBarLinks = ({ navToggled }) => {
+const TopBarLinks = ({ navToggled, highlight }) => {
   if (navToggled)
     return <ul className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0
      fade-in-element">
-      <TopBarButton link="/" linktext="Home" />
-      <TopBarButton link="/about" linktext="About" />
-      <TopBarButton link="https://tctp.xyz/" linktext="Blog" extern={true} />
-      <TopBarButton link="/portfolio" linktext="Portfolio" />
-      <TopBarButton link="/contact" linktext="Contact" />
+      <TopBarButton link="/" linktext="Home" highlight={highlight[0]} />
+      <TopBarButton link="/about" linktext="About" highlight={highlight[1]} />
+      <TopBarButton link="https://blog.nextdev.in/" linktext="Blog" extern={true} highlight={highlight[2]} />
+      <TopBarButton link="/portfolio" linktext="Portfolio" highlight={highlight[3]} />
+      <TopBarButton link="/contact" linktext="Contact" highlight={highlight[4]} />
     </ul>;
 };
 
-const TopBar = ({ page }) => {
+const TopBar = ({ page, highlight }) => {
   const [navButtonToggled, setNav] = useState(window.innerWidth < 720 ? 0 : 1);
   const menuStyle = navButtonToggled ? 'border-0 text-white bg-slate-500 active:bg-slate-600' : 'active:bg-slate-200';
 
@@ -54,7 +64,7 @@ const TopBar = ({ page }) => {
         <FiMenu />
       </div>
     </div>
-    <TopBarLinks navToggled={navButtonToggled} />
+    <TopBarLinks navToggled={navButtonToggled} highlight={highlight} />
   </div>;
 };
 
