@@ -81,7 +81,7 @@ const CarouselButton = ({ onClick, nav }) =>
 
 const WelcomeCarousel = () =>
   <Carousel
-    className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg"
+    className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100"
     prevArrow={({ handlePrev }) => (
       <CarouselButton onClick={handlePrev} nav={0} />
     )}
