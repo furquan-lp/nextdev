@@ -74,8 +74,9 @@ const WelcomeCarousel = () =>
 const CarouselButton = ({ onClick, nav }) =>
   <div className={`${nav === 0 ?
     '!absolute top-2/4 -translate-y-2/4 left-1' : '!absolute top-2/4 -translate-y-2/4 !right-1'}
-      p-2 md:p-3 rounded-full text-xl text-slate-100 cursor-pointer bg-slate-600/50 hover:text-blue-200
-       hover:bg-slate-600/70 transition-colors duration-100`} onClick={onClick}>
+      px-1 py-6 md:px-3 md:py-3 md:rounded-full text-xl text-slate-500 bg-slate-200/50 md:text-slate-100
+       md:bg-slate-600/50 cursor-pointer hover:text-blue-200 hover:bg-slate-600/70 transition-colors duration-200`
+  } onClick={onClick}>
     {nav === 0 ? <FiChevronLeft /> : <FiChevronRight />}
   </div>;
 
