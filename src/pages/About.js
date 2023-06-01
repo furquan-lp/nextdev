@@ -5,6 +5,7 @@ import { SiGmail } from 'react-icons/si';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
+import Bar from '../components/Bar';
 
 export const About = () =>
   <div className="bg-minimal-react bg-contain bg-center bg-no-repeat ">
@@ -25,6 +26,7 @@ export const About = () =>
              rounded-full justify-center items-center transition-all duration-200"><FiMail /></a>
           </div>
         </div>
+        <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <div className="border shadow-lg mx-1 my-2 md:ml-px md:mr-0 md:my-0 p-1 max-w-5xl ">
           <div className="flex font-aboutfont text-4xl md:text-5xl justify-center">About Me</div>
           <div className="flex flex-col justify-between text-xl md:text-2xl py-2 font-abouttext">
