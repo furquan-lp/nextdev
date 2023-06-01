@@ -27,27 +27,6 @@ code {
   --underline-width: 100%;
 }
 
-
-@media screen and (min-width: 768px) {
-  .clipped-shadow {
-    filter: drop-shadow(0px 4px 6px rgb(0 0 0 / 0.1));
-    /*
-  0px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)*/
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .clipped-card-right {
-    clip-path: polygon(0 0, 100% 0%, 70% 100%, 0% 100%);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .clipped-card-left {
-    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-}
-
 .typewriter {
   overflow: hidden;
   border-right: .15em solid #3b82f6;
