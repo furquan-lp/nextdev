@@ -96,14 +96,16 @@ const WelcomeCarousel = () =>
     <CarouselCard title="The Chip Tinker Project - A Gatsby Blog"
       tags={["web", "gatsby", "react"]}
       text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
-         Netlify backend."
+         Netlify backend. Thanks to Tailwind CSS it has a mobile-first design and it uses Netlify CMS which helps me
+         push out blog posts quickly."
       buttonLink="https://tctp.xyz"
       buttonText="Visit site"
       image={tctpImg}
     />
     <CarouselCard title="Webenv - A React Native App on an Iot Backend"
       tags={["react", "mobile", "IoT"]}
-      text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data."
+      text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data. Available
+       for Android, iOS and the web thanks to React Native and the Expo platform."
       buttonLink="http://webenv.nextdev.in"
       buttonText="Check out the live demo"
       image={webenvImg}
