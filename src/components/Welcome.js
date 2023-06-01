@@ -91,7 +91,7 @@ const WelcomeCarousel = () =>
     )}
     autoplay={true}
     loop={true}
-    navigation={false}
+    navigation={() => false}
   >
     <CarouselCard title="The Chip Tinker Project - A Gatsby Blog"
       tags={["web", "gatsby", "react"]}
