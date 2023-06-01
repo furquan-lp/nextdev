@@ -7,7 +7,7 @@ import iotImg from '../assets/device.gif';
 import githubImg from '../assets/github-screenshot.webp';
 
 const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
-  <div className="flex mx-px my-px flex-col md:flex-row bg-white/90 text-slate-700">
+  <div className="flex flex-col md:flex-row bg-white/90 text-slate-700">
     <img className="md:w-6/12 w-full md:h-96 h-auto" src={image}
       alt={`${title} screenshot"`} />
     <div className="flex flex-col m-4 max-w-3xl justify-between">
@@ -81,7 +81,7 @@ const CarouselButton = ({ onClick, nav }) =>
 
 const WelcomeCarousel = () =>
   <Carousel
-    className="h-4/6 my-1 md:my-4 overflow-hidden shadow-lg"
+    className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg"
     prevArrow={({ handlePrev }) => (
       <CarouselButton onClick={handlePrev} nav={0} />
     )}
