@@ -12,7 +12,6 @@ const HomeLogo = ({ path }) =>
   </div>;
 
 const GrayButton = ({ text, highlight }) => {
-  console.log(text, 'for', highlight)
   if (highlight) {
     return (<li className="inline md:p-3 p-1 tracking-widest hover:underline text-white-light
   bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
