@@ -17,14 +17,36 @@ code {
     monospace;
 }
 
-.home-logo-ul {
+.home-logo-u {
   background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
   text-decoration: none;
   transition: background-size 500ms;
 }
 
-.home-logo-ul:hover {
+.home-logo-u:hover {
   --underline-width: 100%;
+}
+
+.about-u-animation {
+  position: relative;
+}
+
+.about-u-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #475569;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.about-u-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .typewriter {
