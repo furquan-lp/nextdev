@@ -1,4 +1,6 @@
-import { FiArrowRight, FiSend } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+
+import { FiArrowRight, FiSend, FiBox } from 'react-icons/fi';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 
 const HiBox = () =>
@@ -11,6 +13,10 @@ const HiBox = () =>
       <a href="/resume-latest.pdf" className="flex items-center mt-5 mr-auto p-1 text-xl md:text-2xl border
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
           active:bg-slate-500 transition-all duration-200">Résumé <FiArrowRight /></a>
+      <Link to="/portfolio" className="flex items-center mt-5 mr-auto p-1 text-xl md:text-2xl border
+         border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
+          active:bg-slate-500 transition-all duration-200">Stuff I've built<FiBox className="ml-0.5" /></Link>
+
     </div>
     <div className="flex flex-col text-3xl md:text-5xl my-2 mx-1 px-8 py-4 md:my-5 md:ml-5 md:px-20 md:py-10 flex-grow
        font-cardtitle bg-white/95 shadow-lg border border-slate-100">
