@@ -9,8 +9,8 @@ import HiBox from '../components/HiBox';
 const Home = () => {
 
   return (
-    <div className="bg-minimal-react bg-contain bg-center bg-no-repeat">
-      <TopBar page="home" />
+    <div className="bg-minimal-react bg-contain bg-center bg-no-repeat ">
+      <TopBar page="home" highlight={[true, false, false, false, false]} />
       <div className="flex flex-col md:mx-24">
         <WelcomeCarousel />
         <HiBox />
