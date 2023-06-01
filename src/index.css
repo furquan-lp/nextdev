@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa&family=Roboto:wght@100;300;400;700&family=Ubuntu+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa&family=Patrick+Hand&family=Permanent+Marker&family=Roboto:wght@100;300;400;700&family=Ubuntu+Mono:ital@0;1&display=swap');
 
 body {
   margin: 0;
@@ -106,12 +106,14 @@ code {
   }
 }
 
-.fade-in-element {
-  animation: fadeIn 0.5s;
-  -webkit-animation: fadeIn 0.5s;
-  -moz-animation: fadeIn 0.5s;
-  -o-animation: fadeIn 0.5s;
-  -ms-animation: fadeIn 0.5s;
+@media screen and (max-width: 768px) {
+  .fade-in-element {
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -o-animation: fadeIn 0.5s;
+    -ms-animation: fadeIn 0.5s;
+  }
 }
 
 @keyframes fadeIn {

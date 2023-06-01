@@ -13,9 +13,11 @@ module.exports = withMT({
       },
       fontFamily: {
         'logofont': ['Comfortaa', 'monospace'],
-        'aboutfont': ['Baloo\\ 2', 'cursive'],
+        'hifont': ['Baloo\\ 2', 'cursive'],
         'cardtitle': ['Roboto', 'sans-serif'],
-        'aboutmono': ['Ubuntu Mono', 'monospace']
+        'aboutmono': ['Ubuntu\\ Mono', 'monospace'],
+        'aboutfont': ['Permanent\\ Marker', 'cursive'],
+        'abouttext': ['Patrick\\ Hand', 'cursive']
       },
       colors: {
         'blue-cpp': '#659ad2',
