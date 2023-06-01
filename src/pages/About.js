@@ -21,7 +21,7 @@ export const About = () =>
         </div>
         <div className="border shadow-lg ml-px p-1 max-w-5xl ">
           <div className="flex font-aboutfont text-5xl justify-center">About Me</div>
-          <div className="flex flex-col justify-between md:text-xl py-2">
+          <div className="flex flex-col justify-between md:text-2xl py-2 font-abouttext">
             <div className="my-1">Hello! I'm Syed Ahmad and I like to build web applications. Ever since I remember coming
               into contact with computers and had a vague idea of how they worked, I have loved to program.</div>
             <div className="my-1">So far I'm learning and have worked with various JavaScript frameworks like Node, React,
