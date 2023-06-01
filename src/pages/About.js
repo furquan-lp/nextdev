@@ -10,18 +10,24 @@ export const About = () =>
   <div className="bg-minimal-react bg-contain bg-center bg-no-repeat ">
     <TopBar page="home" highlight={[false, true, false, false, false]} />
     <div className="flex flex-col md:mx-60 my-2 text-slate-800">
-      <div className="flex bg-white/95">
-        <div className="flex flex-col justify-around flex-grow p-1 mr-px border shadow-lg">
-          <img src="/me.webp" className="rounded-lg md:w-full" />
-          <div className="flex flex-shrink my-1 items-center justify-around">
-            <FiLinkedin className="mr-1" />
-            <SiGmail className="mr-1" />
-            <FiMail className="mr-1" />
+      <div className="flex flex-col md:flex-row bg-white/95">
+        <div className="flex flex-col justify-center items-center md:items-stretch md:justify-around flex-grow py-2 md:px-1 md:py-1 mx-1
+         md:mr-px md:ml-0 border shadow-lg">
+          <img src="/me.webp" className="rounded-lg w-3/4 md:w-full mb-2 md:mb-0" alt="a profile photo of myself" />
+          <div className="flex flex-shrink my-0 items-center justify-around">
+            <a href="https://www.linkedin.com/in/syed-ahmad-8226b7221/" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100
+             hover:border-gray-100 rounded-full justify-center items-center transition-all duration-200">
+              <FiLinkedin />
+            </a>
+            <a href="mailto:mail@example.com" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100 hover:border-gray-100
+             rounded-full justify-center items-center transition-all duration-200"><SiGmail /></a>
+            <a href="mailto:mail@example.com" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100 hover:border-gray-100
+             rounded-full justify-center items-center transition-all duration-200"><FiMail /></a>
           </div>
         </div>
-        <div className="border shadow-lg ml-px p-1 max-w-5xl ">
-          <div className="flex font-aboutfont text-5xl justify-center">About Me</div>
-          <div className="flex flex-col justify-between md:text-2xl py-2 font-abouttext">
+        <div className="border shadow-lg mx-1 my-2 md:ml-px md:mr-0 md:my-0 p-1 max-w-5xl ">
+          <div className="flex font-aboutfont text-4xl md:text-5xl justify-center">About Me</div>
+          <div className="flex flex-col justify-between text-xl md:text-2xl py-2 font-abouttext">
             <div className="my-1">Hello! I'm Syed Ahmad and I like to build web applications. Ever since I remember coming
               into contact with computers and had a vague idea of how they worked, I have loved to program.</div>
             <div className="my-1">So far I'm learning and have worked with various JavaScript frameworks like Node, React,
