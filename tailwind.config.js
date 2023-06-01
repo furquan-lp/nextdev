@@ -13,7 +13,7 @@ module.exports = withMT({
       },
       fontFamily: {
         'logofont': ['Comfortaa', 'monospace'],
-        'aboutfont': ['Baloo\\ 2', 'cursive'],
+        'hifont': ['Baloo\\ 2', 'cursive'],
         'cardtitle': ['Roboto', 'sans-serif'],
         'aboutmono': ['Ubuntu Mono', 'monospace']
       },
