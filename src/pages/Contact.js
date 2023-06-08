@@ -1,5 +1,6 @@
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
+import Bar from '../components/Bar';
 
 const ContactForm = ({ submit }) =>
   <form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
@@ -33,6 +34,7 @@ export const Contact = () =>
     <TopBar page="contact" highlight={[false, false, false, false, true]} />
     <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
       <ContactForm submit={(e) => { e.preventDefault(); console.log('form submitted'); }} />
+      <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
       <ReachOut />
     </div>
     <Footer />
