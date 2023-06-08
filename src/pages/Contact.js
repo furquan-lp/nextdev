@@ -1,10 +1,39 @@
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 
+const ContactForm = ({ submit }) =>
+  <form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
+    onSubmit={submit}>
+    <span className="flex font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6 justify-center">Send me a message</span>
+    <label for="name" className="text-lg md:text-2xl my-1 md:my-2 font-thin tracking-wide">Name:</label>
+    <input type="text" name="name" className="bg-slate-50 p-1 border-b border-slate-300
+     placeholder:text-slate-300" placeholder='Enter your name' />
+    <label for="email" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Email:</label>
+    <input type="text" name="email" className="bg-slate-50 p-1 border-b border-slate-300
+     placeholder:text-slate-300" placeholder='Enter your email' />
+    <label for="subject" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Subject:
+    </label>
+    <input type="text" name="subject" className="bg-slate-50 p-1 border-b border-slate-300
+     placeholder:text-slate-300" placeholder='Subject' />
+    <label for="message" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Message:
+    </label>
+    <textarea name="message" className="bg-slate-50 p-1 border-b border-slate-300 placeholder:text-slate-300"
+      rows="5" cols="33" placeholder='Hi...' />
+    <button type="submit" className="p-1 md:p-2 md:text-lg text-white bg-slate-500 hover:text-slate-100
+     hover:bg-slate-400 mr-auto my-4 md:mt-10">Send Message</button>
+  </form>;
+
+const ReachOut = () =>
+  <div className="flex grow p-2 md:p-6 text-slate-700 bg-white/90 shadow-lg">
+    <span className="flex font-aboutfont text-4xl md:text-5xl justify-center">Reach out to me</span>
+  </div>;
+
 export const Contact = () =>
   <div className="bg-minimal-react bg-contain bg-center bg-no-repeat">
     <TopBar page="contact" highlight={[false, false, false, false, true]} />
-    <div className="flex flex-col md:mx-24">
+    <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1">
+      <ContactForm submit={(e) => { e.preventDefault(); console.log('form submitted'); }} />
+      <ReachOut />
     </div>
     <Footer />
   </div>;
