@@ -1,6 +1,5 @@
 import preval from 'preval.macro';
 import { SiReact, SiTailwindcss, SiMaterialdesign } from 'react-icons/si';
-import { MdOutlineViewCarousel } from 'react-icons/md';
 
 const AboutSite = () =>
   <details className="font-aboutmono font-bold text-slate-600 md:text-2xl text-lg my-4 md:my-6 mx-1 md:mx-0">
