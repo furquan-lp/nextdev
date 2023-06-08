@@ -7,19 +7,19 @@ const ContactForm = ({ submit }) =>
     onSubmit={submit}>
     <span className="flex font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6 justify-center">Send me a message</span>
     <label for="name" className="text-lg md:text-2xl my-1 md:my-2 font-thin tracking-wide">Name:</label>
-    <input type="text" name="name" className="bg-slate-50 p-1 border-b border-slate-300
+    <input type="text" name="name" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300" placeholder='Enter your name' />
     <label for="email" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Email:</label>
-    <input type="text" name="email" className="bg-slate-50 p-1 border-b border-slate-300
+    <input type="text" name="email" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300" placeholder='Enter your email' />
     <label for="subject" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Subject:
     </label>
-    <input type="text" name="subject" className="bg-slate-50 p-1 border-b border-slate-300
+    <input type="text" name="subject" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300" placeholder='Subject' />
     <label for="message" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Message:
     </label>
-    <textarea name="message" className="bg-slate-50 p-1 border-b border-slate-300 placeholder:text-slate-300"
-      rows="6" cols="33" placeholder='Hi...' />
+    <textarea name="message" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
+     placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...' />
     <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
      hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>
   </form>;
