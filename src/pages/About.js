@@ -12,7 +12,7 @@ export const About = () =>
     <TopBar page="about" highlight={[false, true, false, false, false]} />
     <div className="flex flex-col md:mx-60 my-2 text-slate-800">
       <div className="flex flex-col md:flex-row md:mb-2 bg-white/95">
-        <div className="flex flex-col justify-center items-center md:items-stretch md:justify-around flex-grow py-2
+        <div className="flex flex-col justify-center items-center md:items-stretch md:justify-around grow py-2
          md:px-1 md:py-1 mx-1 md:mr-px md:ml-0 border shadow-lg">
           <img src="/me.webp" className="rounded-lg w-3/4 md:w-full mb-2 md:mb-0" alt="a profile photograph of myself" />
           <div className="flex flex-shrink my-0 items-center justify-around">

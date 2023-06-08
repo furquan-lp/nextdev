@@ -5,7 +5,7 @@ const Bar = () =>
     <span className="py-0.5 px-4 bg-amber-300"></span>
     <span className="py-0.5 px-4 bg-green-300"></span>
     <span className="py-0.5 px-4 bg-purple-300"></span>
-    <span className="flex-grow p-0.5 bg-slate-300/50"></span>
+    <span className="grow p-0.5 bg-slate-300/50"></span>
   </div>;
 
 export default Bar;
