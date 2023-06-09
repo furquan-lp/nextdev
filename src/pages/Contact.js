@@ -26,8 +26,10 @@ const ContactForm = ({ submit }) =>
 
 const ReachOut = () =>
   <div className="flex flex-col grow p-2 md:p-6 text-slate-700 bg-white/90 shadow-lg">
-    <span className="font-aboutfont text-4xl md:text-5xl">Reach out to me</span>
+    <span className="font-aboutfont text-4xl md:text-5xl mb-2">Reach out to me</span>
     <div className="hidden md:block"><Bar /></div>
+    <span className="my-2 md:my-4 text-lg md:text-xl font-abouttext">I'm open to any queries for work, suggestions or
+      just to have a chat.</span>
   </div>;
 
 export const Contact = () =>
