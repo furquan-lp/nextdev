@@ -60,24 +60,22 @@ export const About = () =>
       <Bar />
       <div className="flex flex-col font-abouttext bg-white/95 my-2 border shadow-lg p-2 md:p-4 mx-1 md:mx-0">
         <span className="font-bold text-3xl md:text-4xl">Stuff I have worked with...</span>
-        <span className="text-xl md:text-2xl my-2">These days I mostly work on websites (or a web fontend for some
-          other piece of tech) with my preferred framework being <u>React</u> (which this website is also built on). I
-          have built websites using pure JavaScript, HTML and CSS where storage and performance constraints demanded so
-          (with my tiny website at espdev.cloud) but I would always prefer React (or Next.js) simply because of the
-          development convenience.</span>
-        <span className="text-xl md:text-2xl my-2">I've also worked with <u>React Native</u> for quite a bit,
-          for my <i>WebEnv</i> frontend (for my envmon microcontroller) for almost a year. At the time, React Native
-          seemed like the natural evolution from React for me but the developer experience made me realize that it has
-          critical differences with regular React and web development in general.</span>
-        <span className="text-xl md:text-2xl my-2">Among major JavaScript frameworks based on React, I've also worked
-          with <u>Gatsby</u> having used it in my <i>The Chip Tinker Project (TCTP)</i> blog which I ran for a year.
-          Gatsby is a nice static site generator (SSG) but it's not simple to use and I had to learn GraphQL to work
-          with it. I've since switched to using <u>Astro.build</u> for my new projects.</span>
-        <span className="text-xl md:text-2xl my-2">I've worked with microcontrollers like Arduino and ESP32 with my
-          <i>WebEnv</i> project using an ESP32 backend and <i>ESPWeb</i> using a NodeMCU backend. I prefer to program
-          in mostly pure C with some C++ features where needed. I haven't committed to learning C++ yet so I avoid using
-          more than a bare minimum of its features. C on the other hand is a great language with relatively simple
-          syntax but its semantic depth seems unending.</span>
+        <span className="text-xl md:text-2xl my-2">These days I mostly work on websites/web-apps usually using <u>React
+        </u> (which this website is also built on). I have built websites using pure JavaScript/HTML/CSS where storage
+          and performance constraints demanded so (with my tiny website at espdev.cloud) but I would always prefer
+          React (or Next.js) simply because of the development convenience.</span>
+        <span className="text-xl md:text-2xl my-2">I've also worked with <u>React Native</u> for quite a bit, for my <i>
+          WebEnv</i> frontend (for my envmon microcontroller). React Native seemed like the natural evolution from React
+          but the developer experience made me realize that it has critical differences with regular React and web
+          development in general.</span>
+        <span className="text-xl md:text-2xl my-2">I've also worked with <u>Gatsby</u> having used it in my <i>The Chip
+          Tinker Project (TCTP)</i> blog which I ran for a year. Gatsby is a nice static site generator (SSG) but it's
+          not simple to use and I had to learn GraphQL to work with it. I've since switched to using <u>Astro.build</u>
+          &nbsp;for new projects.</span>
+        <span className="text-xl md:text-2xl my-2">On the embedded side, I've worked with microcontrollers like Arduino,
+          ESP32 and ESP8266 (NodeMCU) with my <i>WebEnv</i> project using an ESP32 backend and <i>ESPWeb</i> using a
+          NodeMCU backend.
+        </span>
       </div>
       <Bar />
       <div className="flex flex-col font-abouttext bg-white/95 my-2 border shadow-lg p-2 md:p-4 mx-1 md:mx-0">
@@ -85,8 +83,8 @@ export const About = () =>
           learning right now...</span>
         <span className="text-xl md:text-2xl my-2">At the moment I'm learning the ins and outs of the backend of web
           development. It has become especially crucial the further I've dived into web development. Even during the
-          development of this website, jumping in with relatively little idea of the backend made the developer
-          experience quite cumbersome.</span>
+          development of this website, jumping in with relatively little idea of the backend made the development
+          somewhat cumbersome.</span>
         <span className="text-xl md:text-2xl my-2">As a part of that endeavor I've been learning SQL (PostgresSQL
           specifically) and databases in general. For web development in general, I plan to learn TypeScript soon. Among
           web frameworks, I don't plan to hop on to every hot new framework being released since JavaScript frameworks
