@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+import { Tooltip } from '@material-tailwind/react';
 import { FiLinkedin, FiMail } from 'react-icons/fi';
 import { SiGmail } from 'react-icons/si';
 
@@ -16,19 +17,25 @@ export const About = () =>
          md:px-1 md:py-1 mx-1 md:mr-px md:ml-0 border shadow-lg">
           <img src="/me.webp" className="rounded-lg w-3/4 md:w-full mb-2 md:mb-0" alt="a profile photograph of myself" />
           <div className="flex shrink my-0 items-center justify-around">
-            <a href="https://www.linkedin.com/in/syed-ahmad-8226b7221/" className="p-2 border mx-2 md:mx-0
+            <Tooltip content="Check my LinkedIn">
+              <a href="https://www.linkedin.com/in/syed-ahmad-nextdev/" className="p-2 border mx-2 md:mx-0
              hover:bg-gray-100 hover:border-gray-100 rounded-full justify-center items-center transition-all
               duration-200">
-              <FiLinkedin />
-            </a>
-            <a href="mailto:mail@example.com" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100
+                <FiLinkedin />
+              </a>
+            </Tooltip>
+            <Tooltip content="Contact my Gmail">
+              <a href="mailto:furquan.lp@gmail.com" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100
              hover:border-gray-100 rounded-full justify-center items-center transition-all duration-200">
-              <SiGmail />
-            </a>
-            <a href="mailto:mail@example.com" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100
+                <SiGmail />
+              </a>
+            </Tooltip>
+            <Tooltip content="Contact my email">
+              <a href="mailto:furquan@pm.me" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100
              hover:border-gray-100 rounded-full justify-center items-center transition-all duration-200">
-              <FiMail />
-            </a>
+                <FiMail />
+              </a>
+            </Tooltip>
           </div>
         </div>
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
