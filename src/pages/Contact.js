@@ -5,7 +5,7 @@ import Bar from '../components/Bar';
 const ContactForm = ({ submit }) =>
   <form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
     onSubmit={submit}>
-    <span className="flex font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6 justify-center">Send me a message</span>
+    <span className="font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6">Send me a message</span>
     <label for="name" className="text-lg md:text-2xl my-1 md:my-2 font-thin tracking-wide">Name:</label>
     <input type="text" name="name" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300" placeholder='Enter your name' />
@@ -25,8 +25,9 @@ const ContactForm = ({ submit }) =>
   </form>;
 
 const ReachOut = () =>
-  <div className="flex grow p-2 md:p-6 text-slate-700 bg-white/90 shadow-lg">
-    <span className="flex font-aboutfont text-4xl md:text-5xl justify-center">Reach out to me</span>
+  <div className="flex flex-col grow p-2 md:p-6 text-slate-700 bg-white/90 shadow-lg">
+    <span className="font-aboutfont text-4xl md:text-5xl">Reach out to me</span>
+    <div className="hidden md:block"><Bar /></div>
   </div>;
 
 export const Contact = () =>
