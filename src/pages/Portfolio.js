@@ -1,4 +1,5 @@
 import { FiExternalLink } from 'react-icons/fi';
+import { SiReact } from 'react-icons/si';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
@@ -8,12 +9,22 @@ import testImg from '../assets/simpledev-screenshot.png';
 const PortfolioCardImage = ({ image, alt }) =>
   <img src={image} alt={alt} className="p-1 h-1/2 md:w-1/3 md:h-80 bg-white/90 border shadow-lg" />;
 
+const PortfolioCardTag = ({ text, color, children }) =>
+  <div className={`flex p-1.5 mr-auto rounded md:text-lg ${color}`}>
+    {children}
+    <span className="ml-1">{text}</span>
+  </div>;
+
 const PortfolioCardText = ({ title, text, tags, code, link, margin }) =>
-  <div className={`flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg ${margin}`}>
+  <div className={`flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg
+   ${margin}`}>
     <span className="flex flex-col">
       <span className="my-2 md:my-6 font-abouttext text-4xl">{title}</span>
       <span className="my-2 text-xl">{text}</span>
     </span>
+    <PortfolioCardTag text="React" color="bg-blue-react text-white">
+      <SiReact className="self-center" />
+    </PortfolioCardTag>
     <span className="flex">
       {code && <a href={code} className="flex items-center mr-2 p-1 text-lg md:text-xl border
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
