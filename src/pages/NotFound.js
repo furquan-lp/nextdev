@@ -11,8 +11,8 @@ export const NotFound = () =>
       <img src="./notfound.webp" alt="Empty cardboard boxes with the word 'oops'" className="w-1/2 border my-6" />
       <span className="my-2 md:my-6 font-bold text-2xl md:text-4xl font-aboutmono">Uh oh! The page you were looking for
         doesn't exist.</span>
-      <Link to="/" className="flex text-xl md:text-3xl"><FiArrowUpCircle className="self-center mr-2" />Back to home.
-      </Link>
+      <Link to="/" className="flex text-xl md:text-3xl underline hover:no-underline hover:text-slate-500
+       transition-colors duration-200"><FiArrowUpCircle className="self-center mr-1" />Back to home.</Link>
     </div>
     <div className="sticky top-[100vh]"><Footer /></div>
   </div>;
