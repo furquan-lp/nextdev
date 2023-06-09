@@ -3,6 +3,7 @@ import { SiReact } from 'react-icons/si';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
+import Bar from '../components/Bar';
 
 import testImg from '../assets/simpledev-screenshot.png';
 
@@ -55,7 +56,8 @@ export const Portfolio = () =>
   <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
     <div className="flex flex-col mx-1 md:mx-24">
-      <span className="font-aboutfont text-4xl md:text-5xl my-4 md:my-6">Stuff I've built (and have been working on)</span>
+      <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
+      <span className="mb-4 md:mb-6"><Bar /></span>
       <PortfolioCard image={testImg} title="SimpleDev.site" text="SimpleDev.site is my portfolio website built with
        React. You are HERE." codeLink="https://github.com/furquan-lp/" siteLink="https://oldsite.nextdev.in/" />
     </div>
