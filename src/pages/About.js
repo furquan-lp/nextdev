@@ -49,12 +49,11 @@ export const About = () =>
               the eventual goal of becoming a true full stack developer. I'm based in Kolkata, India (though okay with
               relocating, given the opportunity) and presently pursuing an undergrad degree in engineering.</div>
 
-            <div className="mt-12">If this interested you enough, maybe you'd like to see some of the <Link
-              className="underline hover:text-blue-500 hover:underline transition-all duration-200" to="/portfolio">
-              things I've built</Link> or perhaps you just want to <Link
-                className="underline hover:text-blue-500 hover:underline transition-all duration-200" to="/contact">
-                chat for a bit</Link>. I'm always actively looking for opportunities to utilize and further my skills so
-              thank you for your time.</div>
+            <div className="mt-12">If this interested you enough, maybe you'd like to see some of the <Link className=
+              "underline text-blue-500 hover:text-inherit transition-all duration-200" to="/portfolio">things I've
+              built</Link> or perhaps you just want to <Link className="underline text-blue-500 hover:text-inherit
+             transition-all duration-200" to="/contact">chat for a bit</Link>. I'm always actively looking for
+              opportunities to utilize and further my skills so thank you for your time.</div>
           </div>
         </div>
       </div>
