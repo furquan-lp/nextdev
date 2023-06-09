@@ -1,10 +1,9 @@
 import preval from 'preval.macro';
 import { SiReact, SiTailwindcss, SiMaterialdesign } from 'react-icons/si';
-import { MdOutlineViewCarousel } from 'react-icons/md';
 
 const AboutSite = () =>
   <details className="font-aboutmono font-bold text-slate-600 md:text-2xl text-lg my-4 md:my-6 mx-1 md:mx-0">
-    <summary>More about this website...</summary>
+    <summary className="cursor-pointer">More about this website...</summary>
     This website is built using:
     <ul className="flex flex-col mb-5 font-normal open:font-bold md:text-xl text-base">
       <li className="mr-auto"><a href="https://reactjs.org/" className="flex items-center mx-1 my-2 p-1 border
