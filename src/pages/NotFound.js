@@ -7,8 +7,8 @@ import Footer from '../components/Footer';
 export const NotFound = () =>
   <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="home" highlight={[false, false, false, false, false]} />
-    <div className="flex flex-col items-center text-slate-700 mx-1 md:mx-0">
-      <img src="./notfound.webp" alt="Empty cardboard boxes with the word 'oops'" className="w-1/2 border my-6" />
+    <div className="flex flex-col md:items-center text-slate-700 mx-2 md:mx-0">
+      <img src="./notfound.webp" alt="Empty cardboard boxes with the word 'oops'" className="md:w-1/2 border my-6" />
       <span className="my-2 md:my-6 font-bold text-2xl md:text-4xl font-aboutmono">Uh oh! The page you were looking for
         doesn't exist.</span>
       <Link to="/" className="flex text-xl md:text-3xl underline hover:no-underline hover:text-slate-500
