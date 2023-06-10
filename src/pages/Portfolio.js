@@ -32,7 +32,7 @@ const PortfolioCardImage = ({ image, alt }) =>
   <img src={image} alt={alt} className="p-1 h-1/2 md:w-1/3 md:h-80 bg-white/90 border shadow-lg" />;
 
 const PortfolioCardTag = ({ text, color, children }) =>
-  <div className={`flex items-center p-1 md:p-1.5 mr-1 md:mr-2 rounded my-2 md:my-0 md:text-lg ${color}`}>
+  <div className={`flex items-center p-1 md:p-1.5 mr-1 md:mr-2 rounded my-1 md:my-0 md:text-lg ${color}`}>
     {children}
     <span className="ml-1">{text}</span>
   </div>;
@@ -44,7 +44,7 @@ const PortfolioCardText = ({ title, text, tags, code, link, margin }) =>
       <span className="my-2 md:my-6 font-abouttext text-3xl md:text-4xl">{title}</span>
       <span className="my-2 text-lg md:text-xl">{text}</span>
     </span>
-    <span className="flex md:my-0 my-1">
+    <span className="flex md:my-0 my-2 flex-wrap">
       {tags.map(t => <PortfolioCardTag text={t.text} color={t.color}>{resolvePTagIcon(t.tech)}</PortfolioCardTag>)}
     </span>
     <span className="flex">
