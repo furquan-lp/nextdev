@@ -1,5 +1,9 @@
 import { FiExternalLink } from 'react-icons/fi';
-import { SiReact } from 'react-icons/si';
+import {
+  SiJavascript, SiReact, SiTailwindcss, SiGatsby, SiMui, SiArduino, SiCplusplus, SiGnubash
+} from 'react-icons/si';
+import { TbBrandReactNative, TbQuestionMark } from 'react-icons/tb';
+import { BiMicrochip } from 'react-icons/bi';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
@@ -7,11 +11,27 @@ import Bar from '../components/Bar';
 
 import testImg from '../assets/simpledev-screenshot.png';
 
+const resolvePTagIcon = (tech) => {
+  switch (tech) {
+    case 'js': return <SiJavascript />;
+    case 'react': return <SiReact />;
+    case 'react-native': return <TbBrandReactNative />;
+    case 'tailwind': return <SiTailwindcss />;
+    case 'gatsby': return <SiGatsby />;
+    case 'mui': return <SiMui />;
+    case 'arduino': return <SiArduino />;
+    case 'cpp': return <SiCplusplus />;
+    case 'bash': return <SiGnubash />;
+    case 'esp32': return <BiMicrochip />;
+    default: return <TbQuestionMark />;
+  }
+};
+
 const PortfolioCardImage = ({ image, alt }) =>
   <img src={image} alt={alt} className="p-1 h-1/2 md:w-1/3 md:h-80 bg-white/90 border shadow-lg" />;
 
 const PortfolioCardTag = ({ text, color, children }) =>
-  <div className={`flex p-1.5 mr-auto rounded my-2 md:my-0 md:text-lg ${color}`}>
+  <div className={`flex items-center p-1.5 mr-auto rounded my-2 md:my-0 md:text-lg ${color}`}>
     {children}
     <span className="ml-1">{text}</span>
   </div>;
@@ -24,7 +44,7 @@ const PortfolioCardText = ({ title, text, tags, code, link, margin }) =>
       <span className="my-2 text-lg md:text-xl">{text}</span>
     </span>
     <PortfolioCardTag text="React" color="bg-blue-react text-white">
-      <SiReact className="self-center" />
+      <SiReact />
     </PortfolioCardTag>
     <span className="flex">
       {code && <a href={code} className="flex items-center mr-2 p-1 text-lg md:text-xl border
