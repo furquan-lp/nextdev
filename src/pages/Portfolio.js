@@ -31,7 +31,7 @@ const PortfolioCardImage = ({ image, alt }) =>
   <img src={image} alt={alt} className="p-1 h-1/2 md:w-1/3 md:h-80 bg-white/90 border shadow-lg" />;
 
 const PortfolioCardTag = ({ text, color, children }) =>
-  <div className={`flex items-center p-1.5 mr-auto rounded my-2 md:my-0 md:text-lg ${color}`}>
+  <div className={`flex items-center p-1.5 mr-1 md:mr-2 rounded my-2 md:my-0 md:text-lg ${color}`}>
     {children}
     <span className="ml-1">{text}</span>
   </div>;
@@ -43,9 +43,9 @@ const PortfolioCardText = ({ title, text, tags, code, link, margin }) =>
       <span className="my-2 md:my-6 font-abouttext text-3xl md:text-4xl">{title}</span>
       <span className="my-2 text-lg md:text-xl">{text}</span>
     </span>
-    <PortfolioCardTag text="React" color="bg-blue-react text-white">
-      <SiReact />
-    </PortfolioCardTag>
+    <span className="flex">
+      {tags.map(t => <PortfolioCardTag text={t.text} color={t.color}>{resolvePTagIcon(t.tech)}</PortfolioCardTag>)}
+    </span>
     <span className="flex">
       {code && <a href={code} className="flex items-center mr-2 p-1 text-lg md:text-xl border
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
@@ -79,7 +79,12 @@ export const Portfolio = () =>
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
       <span className="mb-4 md:mb-6"><Bar /></span>
       <PortfolioCard image={testImg} title="SimpleDev.site" text="SimpleDev.site is my portfolio website built with
-       React. You are HERE." codeLink="https://github.com/furquan-lp/" siteLink="https://oldsite.nextdev.in/" />
+       React. You are HERE." codeLink="https://github.com/furquan-lp/" siteLink="https://oldsite.nextdev.in/"
+        tags={[
+          { tech: 'react', text: 'React', color: 'bg-blue-react text-white' },
+          { tech: 'js', text: 'JavaScript', color: 'bg-yellow-js text-slate-800' },
+          { tech: 'tailwind', text: 'Tailwind CSS', color: 'bg-blue-tailwind text-white' }
+        ]} />
     </div>
     <div className="sticky top-[100vh]"><Footer /></div>
   </div>;
