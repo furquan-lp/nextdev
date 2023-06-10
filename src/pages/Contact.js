@@ -37,7 +37,7 @@ const ReachOut = () =>
       Phone:&nbsp;<a href="tel:+918210991146" className="text-slate-500">+91 82109 91146</a></span>
     <span className="flex items-center text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiMail className="self-center" /></span>
-      Email:&nbsp;<a href="mailto:furquan@pm.me" className="text-slate-500">furquan@pm.me</a></span>
+      Email:&nbsp;<a href="mailto:nextdev.in@proton.me" className="text-slate-500">nextdev.in@proton.me</a></span>
     <span className="flex items-center text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiLinkedin className="self-center" /></span>
       LinkedIn Profile:&nbsp;<a href="https://www.linkedin.com/in/syed-ahmad-nextdev/" className="text-slate-500">
