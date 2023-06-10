@@ -1,6 +1,6 @@
 import { FiExternalLink } from 'react-icons/fi';
 import {
-  SiJavascript, SiReact, SiTailwindcss, SiGatsby, SiMui, SiArduino, SiCplusplus, SiGnubash
+  SiJavascript, SiReact, SiTailwindcss, SiGatsby, SiMui, SiMaterialdesign, SiArduino, SiCplusplus, SiGnubash
 } from 'react-icons/si';
 import { TbBrandReactNative, TbQuestionMark } from 'react-icons/tb';
 import { BiMicrochip } from 'react-icons/bi';
@@ -19,6 +19,7 @@ const resolvePTagIcon = (tech) => {
     case 'tailwind': return <SiTailwindcss />;
     case 'gatsby': return <SiGatsby />;
     case 'mui': return <SiMui />;
+    case 'material': return <SiMaterialdesign />;
     case 'arduino': return <SiArduino />;
     case 'cpp': return <SiCplusplus />;
     case 'bash': return <SiGnubash />;
@@ -83,7 +84,8 @@ export const Portfolio = () =>
         tags={[
           { tech: 'react', text: 'React', color: 'bg-blue-react text-white' },
           { tech: 'js', text: 'JavaScript', color: 'bg-yellow-js text-slate-800' },
-          { tech: 'tailwind', text: 'Tailwind CSS', color: 'bg-blue-tailwind text-white' }
+          { tech: 'tailwind', text: 'Tailwind CSS', color: 'bg-blue-tailwind text-white' },
+          { tech: 'material', text: 'Material Tailwind', color: 'bg-blue-500 text-white' }
         ]} />
     </div>
     <div className="sticky top-[100vh]"><Footer /></div>
