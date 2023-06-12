@@ -49,7 +49,7 @@ const ReachOut = () =>
   </div>;
 
 export const Contact = () =>
-  <div className="bg-minimal-react bg-contain bg-center bg-no-repeat">
+  <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="contact" highlight={[false, false, false, false, true]} />
     <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
       <ContactForm submit={(e) => { e.preventDefault(); console.log('form submitted'); }} />
