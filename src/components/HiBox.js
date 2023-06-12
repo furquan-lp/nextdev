@@ -16,7 +16,6 @@ const HiBox = () =>
       <Link to="/portfolio" className="flex items-center mt-5 mr-auto p-1 text-xl md:text-2xl border
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
           active:bg-slate-500 transition-all duration-200">Stuff I've built<FiBox className="ml-0.5" /></Link>
-
     </div>
     <div className="flex flex-col text-3xl md:text-5xl my-2 mx-1 md:mx-0 px-8 py-4 md:my-5 md:ml-5 md:px-20 md:py-10
      grow font-cardtitle bg-white/95 shadow-lg border border-slate-100">
@@ -31,9 +30,10 @@ const HiBox = () =>
         The next developer for your organization?
       </div>
       <div className='self-center'>
-        <a href="mailto:mail@exmaple.com" className="flex items-center mt-3 mr-auto p-1 text-xl md:text-2xl border
+        <Link to="/contact" className="flex items-center mt-3 mr-auto p-1 text-xl md:text-2xl border
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
-          active:bg-slate-500 transition-all duration-200">Contact <FiSend className="ml-0.5" /></a></div>
+          active:bg-slate-500 transition-all duration-200">Contact<FiSend className="ml-0.5" /></Link>
+      </div>
     </div>
   </div>;
 

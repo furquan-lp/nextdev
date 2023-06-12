@@ -88,5 +88,5 @@ export const Portfolio = () =>
           { tech: 'material', text: 'Material Tailwind', color: 'bg-blue-500 text-white' }
         ]} />
     </div>
-    <div className="sticky top-[100vh]"><Footer /></div>
+    <Footer />
   </div>;

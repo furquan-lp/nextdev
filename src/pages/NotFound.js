@@ -14,5 +14,5 @@ export const NotFound = () =>
       <Link to="/" className="flex text-xl md:text-3xl underline hover:no-underline hover:text-slate-500
        transition-colors duration-200"><FiArrowUpCircle className="self-center mr-1" />Back to home.</Link>
     </div>
-    <div className="sticky top-[100vh]"><Footer /></div>
+    <Footer />
   </div>;

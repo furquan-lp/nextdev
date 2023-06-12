@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Bar from '../components/Bar';
 
 export const About = () =>
-  <div className="bg-minimal-react bg-contain bg-center bg-no-repeat">
+  <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="about" highlight={[false, true, false, false, false]} />
     <div className="flex flex-col md:mx-60 my-2 text-slate-800">
       <div className="flex flex-col md:flex-row md:mb-2 bg-white/95">
@@ -42,18 +42,19 @@ export const About = () =>
         <div className="border shadow-lg mx-1 my-2 md:ml-px md:mr-0 md:my-0 p-1 max-w-5xl">
           <div className="flex font-aboutfont text-4xl md:text-5xl justify-center">About Me</div>
           <div className="flex flex-col justify-between text-xl md:text-2xl py-2 font-abouttext">
-            <div className="my-1">Hello! I'm Syed Ahmad and I like to build web applications. Ever since I remember
-              coming into contact with computers and had a vague idea of how they worked, I have loved to program.</div>
-            <div className="my-1">So far I'm learning and have worked with various JavaScript frameworks like Node,
-              React, React Native, Tailwind CSS and GatsbyJS. And I am learning everyday, furthering my skills towards
-              the eventual goal of becoming a true full stack developer. I'm based in Kolkata, India (though okay with
-              relocating, given the opportunity) and presently pursuing an undergrad degree in engineering.</div>
+            <div className="my-1">Hello! I'm Syed Ahmad and I like to build stuff on the web. Ever since I remember
+              coming into contact with computers and had an idea of how they worked, I have loved to program.</div>
+            <div className="my-1">So far I'm learning and have worked with various web technologies and frameworks like
+              Node, React, React Native, Tailwind CSS, etc. (see further down below for more on that). And I am learning
+              everyday, furthering my skills so I can be a better full stack developer. I'm based in Kolkata, India
+              (though open to relocating, given the opportunity) and currently pursuing a bachelor's degree in
+              engineering.</div>
 
-            <div className="mt-12">If this interested you enough, maybe you'd like to see some of the <Link className=
-              "underline text-blue-500 hover:text-inherit transition-all duration-200" to="/portfolio">things I've
-              built</Link> or perhaps you just want to <Link className="underline text-blue-500 hover:text-inherit
-             transition-all duration-200" to="/contact">chat for a bit</Link>. I'm always actively looking for
-              opportunities to utilize and further my skills so thank you for your time.</div>
+            <div className="mt-8">If this has interested you enough, maybe you'd like to see some of the <Link
+              className="underline text-blue-500 hover:text-inherit transition-all duration-200" to="/portfolio">
+              things I've built</Link> or perhaps you just want to <Link className="underline text-blue-500
+               hover:text-inherit transition-all duration-200" to="/contact">chat for a bit</Link>. I'm always actively
+              looking for opportunities to utilize and further my skills. Thank you for your time.</div>
           </div>
         </div>
       </div>
