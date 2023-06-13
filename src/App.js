@@ -16,7 +16,6 @@ const App = () => {
   const [carousel, setCarousel] = useState();
 
   useEffect(() => { service.initCarousel(setCarousel) }, []);
-  service.getBackendVersion();
   return (
     <BrowserRouter>
       <Routes>
