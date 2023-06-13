@@ -26,50 +26,15 @@ const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
     </div>
   </div>;
 
-/**
- * TODO: Fetch the project data from a databse and map it to a series of CarouselCards
- * @returns a Flowbite Carousel with a number of CarouselCards
-
-const WelcomeCarousel = () =>
-  <div className="h-96 mt-4">
-    <Flowbite theme={{ theme: customTheme }}>
-      <Carousel slideInterval={4000} color="primary">
-        <CarouselCard title="Check out my blog!"
-          text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
-         Netlify backend. Thanks to Tailwind CSS it has a mobile first design and it uses Netlify CMS which helps me
-         push out blog posts without having to mess with the internal Markdown."
-          buttonLink="https://tctp.xyz"
-          buttonText="Visit site"
-          image={tctpImg}
-        />
-        <CarouselCard title="Check out my app!"
-          text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data.
-         Available for Android, iOS and the web. The IoT backend is powered by an ESP32 microcontroller which exposes a
-         JSON API over an HTTP server (hosted on the microcontroller itself!)."
-          buttonLink="http://webenv.simpledev.site"
-          buttonText="Check out the live demo"
-          image={webenvImg}
-        />
-        <CarouselCard title="Check out my GitHub!"
-          text="If you want to check the source code for all my projects and want to see what I'm up to then head over
-         here. I commit frequently but no guarantees regarding documentation ;-)"
-          buttonLink="https://github.com/furquan-lp"
-          buttonText="Visit my GitHub"
-          image={githubImg}
-        />
-        <CarouselCard title="Arduino and IoT stuff"
-          text="Two years ago I was working on a project to log environmental data (air quality, temperature, humidity,
-         etc.) and display it to an LCD screen. Later on I ported the code over to an ESP32 board which served the
-         data over LAN WiFi called 'envmon'. A minimal version which forwarded the data over the Internet to a JSON
-         database was used as the backend for WebEnv."
-          buttonLink="https://github.com/furquan-lp/environment-monitor"
-          buttonText="Check out the source code"
-          image={iotImg}
-        />
-      </Carousel>
-    </Flowbite>
-  </div >;
-*/
+const CarouselPlaceholder = () =>
+  <div className="flex flex-col md:flex-row bg-white/90 text-slate-700 h-full w-full">
+    <div className="md:h-80 p-20 md:p-0 md:grow rounded-md m-1 mx-2 md:m-2 bg-slate-200 animate-pulse" />
+    <div className="flex flex-col grow mx-2 md:mx-4">
+      <span className="p-3 my-1 md:p-6 md:my-4 bg-slate-300 animate-pulse" />
+      <span className="p-3 my-1 px-28 mr-auto md:p-5 md:mr-20 md:mb-5 bg-slate-300 animate-pulse" />
+      <span className="p-3 my-1 px-20 mr-auto md:p-4 md:mr-32 md:my-10 bg-slate-300 animate-pulse" />
+    </div>
+  </div>;
 
 const CarouselButton = ({ onClick, nav }) =>
   <div className={`${nav === 0 ?
@@ -80,58 +45,75 @@ const CarouselButton = ({ onClick, nav }) =>
     {nav === 0 ? <FiChevronLeft /> : <FiChevronRight />}
   </div>;
 
-const WelcomeCarousel = () =>
-  <Carousel
-    className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100"
-    prevArrow={({ handlePrev }) => (
-      <CarouselButton onClick={handlePrev} nav={0} />
-    )}
-    nextArrow={({ handleNext }) => (
-      <CarouselButton onClick={handleNext} nav={1} />
-    )}
-    autoplay={true}
-    loop={true}
-    navigation={() => false}
-  >
-    <CarouselCard title="The Chip Tinker Project - A Gatsby Blog"
-      tags={["web", "gatsby", "react"]}
-      text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
+const WelcomeCarousel = ({ carouselData }) => {
+  if (carouselData) {
+    return (<Carousel
+      className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100"
+      prevArrow={({ handlePrev }) => (
+        <CarouselButton onClick={handlePrev} nav={0} />
+      )}
+      nextArrow={({ handleNext }) => (
+        <CarouselButton onClick={handleNext} nav={1} />
+      )}
+      autoplay={true}
+      loop={true}
+      navigation={() => false}
+    >
+      <CarouselCard title="The Chip Tinker Project - A Gatsby Blog"
+        tags={["web", "gatsby", "react"]}
+        text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
          Netlify backend. Thanks to Tailwind CSS it has a mobile-first design and it uses Netlify CMS which helps me
          push out blog posts quickly."
-      buttonLink="https://tctp.xyz"
-      buttonText="Visit site"
-      image={tctpImg}
-    />
-    <CarouselCard title="Webenv - A React Native App on an Iot Backend"
-      tags={["react", "mobile", "IoT"]}
-      text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data. Available
+        buttonLink="https://tctp.xyz"
+        buttonText="Visit site"
+        image={tctpImg}
+      />
+      <CarouselCard title="Webenv - A React Native App on an Iot Backend"
+        tags={["react", "mobile", "IoT"]}
+        text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data. Available
        for Android, iOS and the web thanks to React Native and the Expo platform."
-      buttonLink="http://webenv.nextdev.in"
-      buttonText="Check out the live demo"
-      image={webenvImg}
-    />
-    <CarouselCard title="Arduino, Microcontrollers and Other Iot Stuff"
-      tags={["arduino", "IoT", "backend"]}
-      text="Two years ago I worked on a project to log environmental data and display it to an LCD screen. Later
+        buttonLink="http://webenv.nextdev.in"
+        buttonText="Check out the live demo"
+        image={webenvImg}
+      />
+      <CarouselCard title="Arduino, Microcontrollers and Other Iot Stuff"
+        tags={["arduino", "IoT", "backend"]}
+        text="Two years ago I worked on a project to log environmental data and display it to an LCD screen. Later
          I ported the code to an ESP32 board which was used as the backend for WebEnv."
-      buttonLink="https://github.com/furquan-lp/environment-monitor"
-      buttonText="Check out the source code"
-      image={iotImg}
-    />
-    <CarouselCard title="Check Out My Github for More Updates"
-      tags={["web", "development"]}
-      text="If you want to check the source code for all my projects and want to see what I'm up to then head over
+        buttonLink="https://github.com/furquan-lp/environment-monitor"
+        buttonText="Check out the source code"
+        image={iotImg}
+      />
+      <CarouselCard title="Check Out My Github for More Updates"
+        tags={["web", "development"]}
+        text="If you want to check the source code for all my projects and want to see what I'm up to then head over
          here. I commit frequently but no guarantees regarding documentation ;-)"
-      buttonLink="https://github.com/furquan-lp"
-      buttonText="Visit my GitHub"
-      image={githubImg}
-    />
-  </Carousel>;
-
+        buttonLink="https://github.com/furquan-lp"
+        buttonText="Visit my GitHub"
+        image={githubImg}
+      />
+    </Carousel>);
+  } else {
+    return (<Carousel
+      className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100"
+      prevArrow={({ handlePrev }) => (
+        <CarouselButton onClick={handlePrev} nav={0} />
+      )}
+      nextArrow={({ handleNext }) => (
+        <CarouselButton onClick={handleNext} nav={1} />
+      )}
+      autoplay={true}
+      loop={true}
+      navigation={() => false}
+    >
+      <CarouselPlaceholder />
+    </Carousel>);
+  }
+};
 
 const Welcome = () => {
   return (
-    <WelcomeCarousel />
+    <WelcomeCarousel carouselData="??" />
   );
 };
 
