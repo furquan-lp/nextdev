@@ -24,7 +24,8 @@ export const BlogComingSoon = () =>
           Don't worry, great things are happening @NEXTDEV.
         </span>
         <Link to="/" className="text-xl md:text-2xl p-2 font-sans rounded border border-blue-500 bg-cyan-800
-         hover:underline hover:bg-blue-600">Back to <span className="tracking-wider">NEXTDEV</span>.</Link>
+         hover:underline hover:bg-blue-600 transition-colors duration-200">Back to <span className="tracking-wider">
+            NEXTDEV</span>.</Link>
       </span>
     </div>
   </div>;
