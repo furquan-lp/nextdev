@@ -11,6 +11,8 @@ import Bar from '../components/Bar';
 
 import testImg from '../assets/simpledev-screenshot.png';
 
+import { usePageTitle } from '../myHooks';
+
 const resolvePTagIcon = (tech) => {
   switch (tech) {
     case 'js': return <SiJavascript />;
@@ -73,8 +75,9 @@ const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink, reverse }
   }
 };
 
-export const Portfolio = () =>
-  <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
+export const Portfolio = () => {
+  usePageTitle('Portfolio');
+  return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
     <div className="flex flex-col mx-1 md:mx-24">
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
@@ -89,4 +92,5 @@ export const Portfolio = () =>
         ]} />
     </div>
     <Footer />
-  </div>;
+  </div>);
+}
