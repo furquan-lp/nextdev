@@ -45,7 +45,7 @@ const CarouselButton = ({ onClick, nav }) =>
     {nav === 0 ? <FiChevronLeft /> : <FiChevronRight />}
   </div>;
 
-const WelcomeCarousel = ({ carouselData }) => {
+const WelcomeCarousel = ({ carouselData, apiURL }) => {
   if (carouselData) {
     return (<Carousel
       className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100"
@@ -59,39 +59,8 @@ const WelcomeCarousel = ({ carouselData }) => {
       loop={true}
       navigation={() => false}
     >
-      <CarouselCard title="The Chip Tinker Project - A Gatsby Blog"
-        tags={["web", "gatsby", "react"]}
-        text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
-         Netlify backend. Thanks to Tailwind CSS it has a mobile-first design and it uses Netlify CMS which helps me
-         push out blog posts quickly."
-        buttonLink="https://tctp.xyz"
-        buttonText="Visit site"
-        image={tctpImg}
-      />
-      <CarouselCard title="Webenv - A React Native App on an Iot Backend"
-        tags={["react", "mobile", "IoT"]}
-        text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data. Available
-       for Android, iOS and the web thanks to React Native and the Expo platform."
-        buttonLink="http://webenv.nextdev.in"
-        buttonText="Check out the live demo"
-        image={webenvImg}
-      />
-      <CarouselCard title="Arduino, Microcontrollers and Other Iot Stuff"
-        tags={["arduino", "IoT", "backend"]}
-        text="Two years ago I worked on a project to log environmental data and display it to an LCD screen. Later
-         I ported the code to an ESP32 board which was used as the backend for WebEnv."
-        buttonLink="https://github.com/furquan-lp/environment-monitor"
-        buttonText="Check out the source code"
-        image={iotImg}
-      />
-      <CarouselCard title="Check Out My Github for More Updates"
-        tags={["web", "development"]}
-        text="If you want to check the source code for all my projects and want to see what I'm up to then head over
-         here. I commit frequently but no guarantees regarding documentation ;-)"
-        buttonLink="https://github.com/furquan-lp"
-        buttonText="Visit my GitHub"
-        image={githubImg}
-      />
+      {carouselData.map(carousel => <CarouselCard title={carousel.title} tags={carousel.tags} text={carousel.text}
+        buttonLink={carousel.link} buttonText={carousel.button} image={`${apiURL}${carousel.image}`} />)}
     </Carousel>);
   } else {
     return (<Carousel
@@ -111,9 +80,9 @@ const WelcomeCarousel = ({ carouselData }) => {
   }
 };
 
-const Welcome = () => {
+const Welcome = ({ carouselData, apiURL }) => {
   return (
-    <WelcomeCarousel carouselData="??" />
+    <WelcomeCarousel />
   );
 };
 
