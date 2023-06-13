@@ -82,7 +82,7 @@ const WelcomeCarousel = ({ carouselData, apiURL }) => {
 
 const Welcome = ({ carouselData, apiURL }) => {
   return (
-    <WelcomeCarousel />
+    <WelcomeCarousel carouselData={carouselData} apiURL={apiURL} />
   );
 };
 
