@@ -17,12 +17,14 @@ export const BlogComingSoon = () =>
   <div className="bg-slate-800 min-h-screen ">
     <BlogTopBar />
     <div className="flex flex-col text-white text-center">
-      <span className="p-28 text-xl">Sorry, the blog isn't available at the moment.</span>
-      <span className="flex flex-col items-center bg-teal-600 p-28">
-        <span className="text-6xl font-blogfont italic">Coming Soon.</span>
-        <span className="my-4 md:my-10 text-4xl font-aboutmono">Don't worry, great things are happening @NEXTDEV.</span>
-        <Link to="/" className="text-2xl p-2 font-sans rounded border border-blue-500 bg-cyan-800
-         hover:underline hover:bg-blue-600">Back to <span className="tracking-wide">NEXTDEV</span>.</Link>
+      <span className="md:p-28 p-6 py-28 text-xl">Sorry, the blog isn't available at the moment.</span>
+      <span className="flex flex-col items-center bg-teal-600 md:p-28 p-6 py-28">
+        <span className="text-5xl md:text-6xl font-blogfont italic">Coming Soon.</span>
+        <span className="my-6 md:my-10 text-3xl md:text-4xl font-aboutmono">
+          Don't worry, great things are happening @NEXTDEV.
+        </span>
+        <Link to="/" className="text-xl md:text-2xl p-2 font-sans rounded border border-blue-500 bg-cyan-800
+         hover:underline hover:bg-blue-600">Back to <span className="tracking-wider">NEXTDEV</span>.</Link>
       </span>
     </div>
   </div>;
