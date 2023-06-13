@@ -33,21 +33,25 @@ const ReachOut = () =>
     <span className="font-aboutfont text-4xl md:text-5xl mb-2">Reach out to me</span>
     <div className="hidden md:block"><Bar /></div>
     <span className="my-2 md:my-4 text-xl md:text-2xl font-abouttext">I'm open to any queries for work, suggestions or
-      just to have a chat.</span>
+      just to have a chat.
+    </span>
     <span className="flex items-center text-lg my-2 md:my-4 md:mt-8">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiPhone className="self-center" /></span>
-      Phone:&nbsp;<a href="tel:+918210991146" className="text-slate-500">+91 82109 91146</a></span>
+      Phone:&nbsp;<a href="tel:+918210991146" className="text-slate-500">+91 82109 91146</a>
+    </span>
     <span className="flex items-center text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiMail className="self-center" /></span>
-      Email:&nbsp;<a href="mailto:nextdev.in@proton.me" className="text-slate-500">nextdev.in@proton.me</a></span>
+      Email:&nbsp;<a href="mailto:nextdev.in@proton.me" className="text-slate-500">nextdev.in@proton.me</a>
+    </span>
     <span className="flex items-center text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiLinkedin className="self-center" /></span>
       LinkedIn Profile:&nbsp;<a href="https://www.linkedin.com/in/syed-ahmad-nextdev/" className="text-slate-500">
-        https://www.linkedin.com/in/syed-ahmad-nextdev/</a></span>
+        https://www.linkedin.com/in/syed-ahmad-nextdev/</a>
+    </span>
     <span className="flex items-center text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiMapPin className="self-center" /></span>
-      Location:&nbsp;<span className="font-light">North 24 Parganas, Kolkata, West Bengal, India</span></span>
-    <span className="flex items-center text-lg my-2 md:my-4"></span>
+      Location:&nbsp;<span className="font-light">North 24 Parganas, Kolkata, West Bengal, India</span>
+    </span>
   </div>;
 
 export const Contact = () => {
