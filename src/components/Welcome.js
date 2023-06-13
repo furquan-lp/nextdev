@@ -59,8 +59,9 @@ const WelcomeCarousel = ({ carouselData, apiURL }) => {
       loop={true}
       navigation={() => false}
     >
-      {carouselData.map(carousel => <CarouselCard title={carousel.title} tags={carousel.tags} text={carousel.text}
-        buttonLink={carousel.link} buttonText={carousel.button} image={`${apiURL}${carousel.image}`} />)}
+      {carouselData.map(carousel =>
+        <CarouselCard title={carousel.title} tags={carousel.tags} text={carousel.text} buttonLink={carousel.link}
+          buttonText={carousel.button} image={`${apiURL}${carousel.image}`} key={carousel.id} />)}
     </Carousel>);
   } else {
     return (<Carousel
