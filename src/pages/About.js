@@ -8,8 +8,11 @@ import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 import Bar from '../components/Bar';
 
-export const About = () =>
-  <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
+import { usePageTitle } from '../myHooks';
+
+export const About = () => {
+  usePageTitle('About');
+  return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="about" highlight={[false, true, false, false, false]} />
     <div className="flex flex-col md:mx-60 my-2 text-slate-800">
       <div className="flex flex-col md:flex-row md:mb-2 bg-white/95">
@@ -97,4 +100,5 @@ export const About = () =>
       </div>
     </div>
     <Footer />
-  </div>;
+  </div>);
+};

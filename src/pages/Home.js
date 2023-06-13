@@ -5,7 +5,10 @@ import Bar from '../components/Bar';
 import Footer from '../components/Footer';
 import AboutSite from '../components/AboutSite';
 
+import { usePageTitle } from '../myHooks';
+
 const Home = () => {
+  usePageTitle('Home');
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
       <TopBar page="home" highlight={[true, false, false, false, false]} />
