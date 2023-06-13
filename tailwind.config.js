@@ -17,7 +17,8 @@ module.exports = withMT({
         'cardtitle': ['Roboto', 'sans-serif'],
         'aboutmono': ['Ubuntu\\ Mono', 'monospace'],
         'aboutfont': ['Permanent\\ Marker', 'cursive'],
-        'abouttext': ['Patrick\\ Hand', 'cursive']
+        'abouttext': ['Patrick\\ Hand', 'cursive'],
+        'blogfont': ['Nova\\ Cut', 'cursive']
       },
       colors: {
         'blue-cpp': '#659ad2',
