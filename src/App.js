@@ -9,12 +9,14 @@ import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
+import { BlogComingSoon } from './pages/BlogComingSoon';
 import service from './services';
 
 const App = () => {
   const [carousel, setCarousel] = useState();
 
   useEffect(() => { service.initCarousel(setCarousel) }, []);
+  service.getBackendVersion();
   return (
     <BrowserRouter>
       <Routes>
@@ -23,6 +25,7 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="blog" element={<BlogComingSoon />} />
       </Routes>
     </BrowserRouter>
   );
