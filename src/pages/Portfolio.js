@@ -9,8 +9,6 @@ import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 import Bar from '../components/Bar';
 
-import testImg from '../assets/simpledev-screenshot.png';
-
 import { usePageTitle } from '../myHooks';
 
 const resolvePTagIcon = (tech) => {
@@ -82,7 +80,7 @@ export const Portfolio = () => {
     <div className="flex flex-col mx-1 md:mx-24">
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
       <span className="mb-4 md:mb-6"><Bar /></span>
-      <PortfolioCard image={testImg} title="SimpleDev.site" text="SimpleDev.site is my portfolio website built with
+      <PortfolioCard image="notfound.webp" title="SimpleDev.site" text="SimpleDev.site is my portfolio website built with
        React. You are HERE." codeLink="https://github.com/furquan-lp/" siteLink="https://oldsite.nextdev.in/"
         tags={[
           { tech: 'react', text: 'React', color: 'bg-blue-react text-white' },

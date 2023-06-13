@@ -1,11 +1,6 @@
 import { Carousel } from "@material-tailwind/react";
 import { FiChevronLeft, FiChevronRight, FiExternalLink } from "react-icons/fi";
 
-import webenvImg from '../assets/webenv-screenshot.webp';
-import tctpImg from '../assets/tctp-screenshot-chrome.webp';
-import iotImg from '../assets/device.gif';
-import githubImg from '../assets/github-screenshot.webp';
-
 const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
   <div className="flex flex-col md:flex-row bg-white/90 text-slate-700">
     <img className="md:w-6/12 w-full md:h-96 h-auto" src={image}
