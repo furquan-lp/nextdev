@@ -44,7 +44,7 @@ const TopBarLinks = ({ navToggled, highlight }) => {
      fade-in-element">
       <TopBarButton link="/" linktext="Home" highlight={highlight[0]} />
       <TopBarButton link="/about" linktext="About" highlight={highlight[1]} />
-      <TopBarButton link="https://blog.nextdev.in/" linktext="Blog" extern={true} highlight={highlight[2]} />
+      <TopBarButton link="/blog" linktext="Blog" highlight={highlight[2]} />
       <TopBarButton link="/portfolio" linktext="Portfolio" highlight={highlight[3]} />
       <TopBarButton link="/contact" linktext="Contact" highlight={highlight[4]} />
     </ul>;
