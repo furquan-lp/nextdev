@@ -10,7 +10,7 @@ import Bar from '../components/Bar';
 
 import { usePageTitle } from '../myHooks';
 
-export const About = () => {
+export const About = ({ backendVersion }) => {
   usePageTitle('About');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="about" highlight={[false, true, false, false, false]} />
@@ -99,6 +99,6 @@ export const About = () => {
           model to solve procedurally generated mazes.</span>
       </div>
     </div>
-    <Footer />
+    <Footer version={backendVersion.version} />
   </div>);
 };

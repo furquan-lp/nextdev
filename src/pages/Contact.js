@@ -54,7 +54,7 @@ const ReachOut = () =>
     </span>
   </div>;
 
-export const Contact = () => {
+export const Contact = ({ backendVersion }) => {
   usePageTitle('Contact');
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
@@ -64,7 +64,7 @@ export const Contact = () => {
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
       </div>
-      <Footer />
+      <Footer version={backendVersion.version} />
     </div>
   );
 };

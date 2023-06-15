@@ -73,7 +73,7 @@ const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink, reverse }
   }
 };
 
-export const Portfolio = () => {
+export const Portfolio = ({ backendVersion }) => {
   usePageTitle('Portfolio');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
@@ -89,6 +89,6 @@ export const Portfolio = () => {
           { tech: 'material', text: 'Material Tailwind', color: 'bg-blue-500 text-white' }
         ]} />
     </div>
-    <Footer />
+    <Footer version={backendVersion.version} />
   </div>);
 }

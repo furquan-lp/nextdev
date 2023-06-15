@@ -7,9 +7,8 @@ import AboutSite from '../components/AboutSite';
 
 import { usePageTitle } from '../myHooks';
 
-const Home = ({ carouselData, apiURL }) => {
+const Home = ({ carouselData, apiURL, backendVersion }) => {
   usePageTitle('Home');
-
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
       <TopBar page="home" highlight={[true, false, false, false, false]} />
@@ -20,7 +19,7 @@ const Home = ({ carouselData, apiURL }) => {
         <Bar />
         <AboutSite />
       </div>
-      <Footer />
+      <Footer version={backendVersion.version} />
     </div>
   );
 };
