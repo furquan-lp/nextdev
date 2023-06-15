@@ -1,6 +1,7 @@
 import { FiExternalLink } from 'react-icons/fi';
 import {
-  SiJavascript, SiReact, SiTailwindcss, SiGatsby, SiMui, SiMaterialdesign, SiArduino, SiCplusplus, SiGnubash
+  SiJavascript, SiReact, SiTailwindcss, SiGatsby, SiMui, SiMaterialdesign, SiArduino, SiCplusplus, SiGnubash,
+  SiNodedotjs, SiExpress, SiMongodb
 } from 'react-icons/si';
 import { TbBrandReactNative, TbQuestionMark } from 'react-icons/tb';
 import { BiMicrochip } from 'react-icons/bi';
@@ -23,7 +24,10 @@ const resolvePTagIcon = (tech) => {
     case 'arduino': return <SiArduino />;
     case 'cpp': return <SiCplusplus />;
     case 'bash': return <SiGnubash />;
-    case 'esp32': return <BiMicrochip />;
+    case 'esp': return <BiMicrochip />;
+    case 'node': return <SiNodedotjs />;
+    case 'express': return <SiExpress />;
+    case 'mongodb': return <SiMongodb />;
     default: return <TbQuestionMark />;
   }
 };
