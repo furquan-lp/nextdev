@@ -14,7 +14,7 @@ import service from './services';
 
 const App = () => {
   const [carousel, setCarousel] = useState();
-  const [backendVersion, setBackendVersion] = useState("unknown");
+  const [backendVersion, setBackendVersion] = useState({ version: "unknown" });
 
   useEffect(() => {
     service.initCarousel(setCarousel);
