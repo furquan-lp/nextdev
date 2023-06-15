@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import { FiGithub } from "react-icons/fi";
 
+import { usePageTitle } from "../myHooks";
+
 const BlogTopBar = () =>
   <div className="p-4 flex items-center justify-between text-slate-100">
     <div className="font-logofont text-xl md:text-2xl p-2 m-1 outline-1">
@@ -13,8 +15,9 @@ const BlogTopBar = () =>
      rounded border border-teal-400"><FiGithub /></a>
   </div>
 
-export const BlogComingSoon = () =>
-  <div className="bg-slate-800 min-h-screen ">
+export const BlogComingSoon = () => {
+  usePageTitle('blog.NEXTDEV (Coming Soon)');
+  return (<div className="bg-slate-800 min-h-screen ">
     <BlogTopBar />
     <div className="flex flex-col text-white text-center">
       <span className="md:p-28 p-6 py-28 text-xl">Sorry, the blog isn't available at the moment.</span>
@@ -28,4 +31,5 @@ export const BlogComingSoon = () =>
             NEXTDEV</span>.</Link>
       </span>
     </div>
-  </div>;
+  </div>);
+}
