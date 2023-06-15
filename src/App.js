@@ -14,16 +14,20 @@ import service from './services';
 
 const App = () => {
   const [carousel, setCarousel] = useState();
+  const [backendVersion, setBackendVersion] = useState("unknown");
 
-  useEffect(() => { service.initCarousel(setCarousel) }, []);
+  useEffect(() => {
+    service.initCarousel(setCarousel);
+    service.initBackendVersion(setBackendVersion);
+  }, []);
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home carouselData={carousel} apiURL={service.API} />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="about" element={<About />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/" element={<Home carouselData={carousel} apiURL={service.API} backendVersion={backendVersion} />} />
+        <Route path="*" element={<NotFound backendVersion={backendVersion} />} />
+        <Route path="about" element={<About backendVersion={backendVersion} />} />
+        <Route path="portfolio" element={<Portfolio backendVersion={backendVersion} />} />
+        <Route path="contact" element={<Contact />} backendVersion={backendVersion} />
         <Route path="blog" element={<BlogComingSoon />} />
       </Routes>
     </BrowserRouter>
