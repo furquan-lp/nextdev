@@ -27,7 +27,7 @@ const App = () => {
         <Route path="*" element={<NotFound backendVersion={backendVersion} />} />
         <Route path="about" element={<About backendVersion={backendVersion} />} />
         <Route path="portfolio" element={<Portfolio backendVersion={backendVersion} />} />
-        <Route path="contact" element={<Contact />} backendVersion={backendVersion} />
+        <Route path="contact" element={<Contact backendVersion={backendVersion} />} />
         <Route path="blog" element={<BlogComingSoon />} />
       </Routes>
     </BrowserRouter>
