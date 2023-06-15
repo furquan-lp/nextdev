@@ -13,7 +13,7 @@ const BlogTopBar = () =>
     </div>
     <a href="https://github.com/furquan-lp/nextdev-blog" className="flex items-center text-lg md:text-xl p-1 md:p-2
      rounded border border-teal-400"><FiGithub /></a>
-  </div>
+  </div>;
 
 export const BlogComingSoon = () => {
   usePageTitle('blog.NEXTDEV (Coming Soon)');
@@ -32,4 +32,4 @@ export const BlogComingSoon = () => {
       </span>
     </div>
   </div>);
-}
+};
