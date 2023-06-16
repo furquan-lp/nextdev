@@ -6,7 +6,11 @@ const initCarousel = (setCarousel) => {
   axios.get(API + 'db/carousel').then(response => setCarousel(response.data));
 };
 
+const initPortfolio = (setPortfolio) => {
+  axios.get(API + 'db/portfolio').then(response => setPortfolio(response.data));
+};
+
 const initBackendVersion = (setBackendVersion) =>
   axios.get(API + 'version').then(response => setBackendVersion(response.data));
 
-export default { initCarousel, initBackendVersion, API };
+export default { initCarousel, initPortfolio, initBackendVersion, API };
