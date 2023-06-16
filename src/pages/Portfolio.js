@@ -97,6 +97,19 @@ const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink, reverse }
   }
 };
 
+const PortfolioCardPlaceholder = () =>
+  <div className="flex flex-col md:flex-row">
+    <div className="border bg-white/90 shadow-lg md:grow md:max-w-xl">
+      <div className="p-20 md:p-0 rounded-md m-2 md:h-72 bg-slate-200 animate-pulse" />
+    </div>
+    <div className="flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg mt-1
+     md:mt-0 md:ml-1">
+      <span className="p-3 my-1 md:p-6 md:my-4 bg-slate-300 animate-pulse" />
+      <span className="p-3 my-1 px-28 mr-auto md:p-5 md:mr-20 md:mb-5 bg-slate-300 animate-pulse" />
+      <span className="p-3 my-1 px-20 mr-auto md:p-4 md:mr-32 md:my-10 bg-slate-300 animate-pulse" />
+    </div>
+  </div>;
+
 export const Portfolio = ({ backendVersion }) => {
   usePageTitle('Portfolio');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
@@ -104,14 +117,7 @@ export const Portfolio = ({ backendVersion }) => {
     <div className="flex flex-col mx-1 md:mx-24">
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
       <span className="mb-4 md:mb-6"><Bar /></span>
-      <PortfolioCard image="notfound.webp" title="SimpleDev.site" text="SimpleDev.site is my portfolio website built with
-       React. You are HERE." codeLink="https://github.com/furquan-lp/" siteLink="https://oldsite.nextdev.in/"
-        tags={[
-          { tech: 'react', text: 'React', color: 'bg-blue-react text-white' },
-          { tech: 'js', text: 'JavaScript', color: 'bg-yellow-js text-slate-800' },
-          { tech: 'tailwind', text: 'Tailwind CSS', color: 'bg-blue-tailwind text-white' },
-          { tech: 'material', text: 'Material Tailwind', color: 'bg-blue-500 text-white' }
-        ]} />
+      <PortfolioCardPlaceholder />
     </div>
     <Footer version={backendVersion.version} />
   </div>);
