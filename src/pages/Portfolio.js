@@ -104,7 +104,7 @@ export const Portfolio = ({ portfolio, apiURL, backendVersion }) => {
   usePageTitle('Portfolio');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
-    <div className="flex flex-col mx-1 md:mx-24 xl:mx-80">
+    <div className="flex flex-col mx-1 lg:mx-24 xl:mx-80">
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
       <span className="mb-4 md:mb-12"><Bar /></span>
       {portfolio ? portfolio.map(p =>
