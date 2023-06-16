@@ -82,7 +82,7 @@ const PortfolioCardText = ({ title, text, tags, code, link }) =>
   </div>;
 
 const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink }) =>
-  <div className="flex flex-col">
+  <div className="flex flex-col mb-2 md:mb-20">
     <PortfolioCardImage image={image} alt={title} />
     <PortfolioCardText title={title} text={text} tags={tags} code={codeLink} link={siteLink} />
   </div>;
@@ -106,7 +106,7 @@ export const Portfolio = ({ portfolio, apiURL, backendVersion }) => {
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
     <div className="flex flex-col mx-1 md:mx-24 xl:mx-80">
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
-      <span className="mb-4 md:mb-6"><Bar /></span>
+      <span className="mb-4 md:mb-12"><Bar /></span>
       {portfolio ? portfolio.map(p =>
         <PortfolioCard image={`${apiURL}${p.image}`} title={p.title} text={p.text} tags={p.tags} codeLink={p.repo}
           siteLink={p.site} key={p.id} />) : <PortfolioCardPlaceholder />}
