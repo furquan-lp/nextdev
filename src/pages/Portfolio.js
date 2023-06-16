@@ -55,9 +55,10 @@ const resolvePTagColor = (tech) => {
 const PortfolioCardImage = ({ image, alt }) =>
   <img src={image} alt={alt} className="p-1 h-1/2 md:w-1/3 md:h-80 bg-white/90 border shadow-lg" />;
 
-const PortfolioCardTag = ({ text, color, children }) =>
-  <div className={`flex items-center p-1 md:p-1.5 mr-1 md:mr-2 rounded my-1 md:my-0 md:text-lg ${color}`}>
-    {children}
+const PortfolioCardTag = ({ tech, text }) =>
+  <div className={`flex items-center p-1 md:p-1.5 mr-1 md:mr-2 rounded my-1 md:my-0 md:text-lg
+   ${resolvePTagColor(tech)}`}>
+    {resolvePTagIcon(tech)}
     <span className="ml-1">{text}</span>
   </div>;
 
@@ -69,7 +70,7 @@ const PortfolioCardText = ({ title, text, tags, code, link, margin }) =>
       <span className="my-2 text-lg md:text-xl">{text}</span>
     </span>
     <span className="flex md:my-0 my-2 flex-wrap">
-      {tags.map(t => <PortfolioCardTag text={t.text} color={t.color}>{resolvePTagIcon(t.tech)}</PortfolioCardTag>)}
+      {tags.map(t => <PortfolioCardTag tech={t.tech} text={t.text} />)}
     </span>
     <span className="flex">
       {code && <a href={code} className="flex items-center mr-2 p-1 text-lg md:text-xl border
@@ -110,14 +111,13 @@ const PortfolioCardPlaceholder = () =>
     </div>
   </div>;
 
-export const Portfolio = ({ backendVersion }) => {
+export const Portfolio = ({ portfolio, backendVersion }) => {
   usePageTitle('Portfolio');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
     <div className="flex flex-col mx-1 md:mx-24">
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
       <span className="mb-4 md:mb-6"><Bar /></span>
-      <PortfolioCardPlaceholder />
     </div>
     <Footer version={backendVersion.version} />
   </div>);
