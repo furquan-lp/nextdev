@@ -53,7 +53,7 @@ const resolvePTagColor = (tech) => {
 };
 
 const PortfolioCardImage = ({ image, alt }) =>
-  <img src={image} alt={alt} className="p-1 h-1/2 md:w-1/3 md:h-80 bg-white/90 border shadow-lg" />;
+  <img src={image} alt={alt} className="p-1 bg-white/90 border shadow-lg" />;
 
 const PortfolioCardTag = ({ tech, text }) =>
   <div className={`flex items-center p-1 md:p-1.5 mr-1 md:mr-2 rounded my-1 md:my-0 md:text-lg
@@ -62,9 +62,8 @@ const PortfolioCardTag = ({ tech, text }) =>
     <span className="ml-1">{text}</span>
   </div>;
 
-const PortfolioCardText = ({ title, text, tags, code, link, margin }) =>
-  <div className={`flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg
-   ${margin}`}>
+const PortfolioCardText = ({ title, text, tags, code, link }) =>
+  <div className="flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg mt-1">
     <span className="flex flex-col">
       <span className="my-2 md:my-6 font-abouttext text-3xl md:text-4xl">{title}</span>
       <span className="my-2 text-lg md:text-xl">{text}</span>
@@ -82,21 +81,11 @@ const PortfolioCardText = ({ title, text, tags, code, link, margin }) =>
     </span>
   </div>;
 
-const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink, reverse }) => {
-  if (reverse) {
-    return <div className="flex flex-col md:flex-row">
-      <PortfolioCardText title={title} text={text} tags={tags} code={codeLink} link={siteLink}
-        margin="mb-1 md:mb-0 md:mr-1" />
-      <PortfolioCardImage image={image} alt={title} />
-    </div>;
-  } else {
-    return <div className="flex flex-col md:flex-row">
-      <PortfolioCardImage image={image} alt={title} />
-      <PortfolioCardText title={title} text={text} tags={tags} code={codeLink} link={siteLink}
-        margin="mt-1 md:mt-0 md:ml-1" />
-    </div>;
-  }
-};
+const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink }) =>
+  <div className="flex flex-col">
+    <PortfolioCardImage image={image} alt={title} />
+    <PortfolioCardText title={title} text={text} tags={tags} code={codeLink} link={siteLink} />
+  </div>;
 
 const PortfolioCardPlaceholder = () =>
   <div className="flex flex-col md:flex-row">
@@ -115,7 +104,7 @@ export const Portfolio = ({ portfolio, apiURL, backendVersion }) => {
   usePageTitle('Portfolio');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
-    <div className="flex flex-col mx-1 md:mx-24">
+    <div className="flex flex-col mx-1 md:mx-24 xl:mx-80">
       <span className="font-aboutfont text-4xl md:text-5xl my-2 mt-4">Stuff I've built (and have been working on)</span>
       <span className="mb-4 md:mb-6"><Bar /></span>
       {portfolio ? portfolio.map(p =>
