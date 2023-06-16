@@ -1,7 +1,7 @@
 import { FiExternalLink } from 'react-icons/fi';
 import {
-  SiJavascript, SiReact, SiTailwindcss, SiGatsby, SiMui, SiMaterialdesign, SiArduino, SiCplusplus, SiGnubash,
-  SiNodedotjs, SiExpress, SiMongodb
+  SiJavascript, SiHtml5, SiCss3, SiReact, SiTailwindcss, SiGatsby, SiMui, SiMaterialdesign, SiArduino, SiCplusplus,
+  SiGnubash, SiNodedotjs, SiExpress, SiMongodb
 } from 'react-icons/si';
 import { TbBrandReactNative, TbQuestionMark } from 'react-icons/tb';
 import { BiMicrochip } from 'react-icons/bi';
@@ -15,6 +15,8 @@ import { usePageTitle } from '../myHooks';
 const resolvePTagIcon = (tech) => {
   switch (tech) {
     case 'js': return <SiJavascript />;
+    case 'html': return <SiHtml5 />;
+    case 'css': return <SiHtml5 />
     case 'react': return <SiReact />;
     case 'react-native': return <TbBrandReactNative />;
     case 'tailwind': return <SiTailwindcss />;
@@ -35,6 +37,8 @@ const resolvePTagIcon = (tech) => {
 const resolvePTagColor = (tech) => {
   switch (tech) {
     case 'js': return 'bg-yellow-js text-slate-800';
+    case 'html': return 'bg-orange-500 text-white';
+    case 'css': return 'bg-blue-600 text-white';
     case 'react': return 'bg-slate-600 text-blue-react';
     case 'react-native': return 'bg-blue-react text-white';
     case 'tailwind': return 'bg-blue-tailwind text-white';
