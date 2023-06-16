@@ -13,16 +13,16 @@ const HomeLogo = ({ path }) =>
 
 const GrayButton = ({ text, highlight }) => {
   if (highlight) {
-    return (<li className="inline md:p-3 p-1 tracking-widest hover:underline text-white-light
+    return (<span className="inline md:p-3 p-1 tracking-widest hover:underline text-white-light
   bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
       {text}
-    </li>);
+    </span>);
   } else {
     return (
-      <li className="inline md:p-3 p-1 tracking-widest hover:underline hover:text-white-light
+      <span className="inline md:p-3 p-1 tracking-widest hover:underline hover:text-white-light
        hover:bg-slate-600 active:bg-slate-500 active:text-white-light select-none transition-all duration-200">
         {text}
-      </li>);
+      </span>);
   }
 }
 
@@ -40,14 +40,14 @@ const TopBarButton = ({ link, linktext, extern, highlight }) => {
 
 const TopBarLinks = ({ navToggled, highlight }) => {
   if (navToggled)
-    return <ul className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0
+    return <nav className="flex flex-col md:flex-row md:items-center list-none text-sm md:text-base md:m-1 p-0
      fade-in-element">
       <TopBarButton link="/" linktext="Home" highlight={highlight[0]} />
       <TopBarButton link="/about" linktext="About" highlight={highlight[1]} />
       <TopBarButton link="/blog" linktext="Blog" highlight={highlight[2]} />
       <TopBarButton link="/portfolio" linktext="Portfolio" highlight={highlight[3]} />
       <TopBarButton link="/contact" linktext="Contact" highlight={highlight[4]} />
-    </ul>;
+    </nav>;
 };
 
 const TopBar = ({ page, highlight }) => {
