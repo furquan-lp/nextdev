@@ -76,12 +76,16 @@ const PortfolioCardText = ({ title, text, tags, code, link }) =>
       {tags.map(t => <PortfolioCardTag tech={t.tech} text={t.text} />)}
     </span>
     <div className="flex md:flex-row-reverse md:mt-4">
-      {code && <a href={code} className="flex items-center p-1 text-lg md:text-xl border mr-1 md:mr-0
-         border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
-          active:bg-slate-500 transition-all duration-200">Source Code<FiExternalLink className="ml-1" /></a>}
-      {link && <a href={link} className="flex items-center md:mr-auto p-1 text-lg md:text-xl border
-         border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
-          active:bg-slate-500 transition-all duration-200">Visit site<FiExternalLink className="ml-1" /></a>}
+      {code && <a href={code} className="flex items-center p-1 text-lg md:text-xl border mr-1 md:mr-0 bg-gray-50
+       border-slate-400 hover:underline hover:bg-slate-600 hover:text-white hover:border-slate-600
+        active:bg-slate-500 active:border-slate-500 active:text-white transition-all duration-200">
+        Source Code<FiExternalLink className="ml-1" />
+      </a>}
+      {link && <a href={link} className="flex items-center md:mr-auto p-1 text-lg md:text-xl border bg-gray-50
+       border-slate-400 hover:underline hover:bg-slate-600 hover:text-white hover:border-slate-600
+        active:bg-slate-500 active:border-slate-500 active:text-white transition-all duration-200">
+        Visit site<FiExternalLink className="ml-1" />
+      </a>}
     </div>
   </div>;
 
