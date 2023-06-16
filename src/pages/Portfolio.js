@@ -88,15 +88,14 @@ const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink }) =>
   </div>;
 
 const PortfolioCardPlaceholder = () =>
-  <div className="flex flex-col md:flex-row">
-    <div className="border bg-white/90 shadow-lg md:grow md:max-w-xl">
-      <div className="p-20 md:p-0 rounded-md m-2 md:h-72 bg-slate-200 animate-pulse" />
+  <div className="flex flex-col md:mb-6">
+    <div className="border bg-white/90 shadow-lg grow">
+      <div className="p-20 md:p-0 rounded-md m-2 md:h-96 bg-slate-200 animate-pulse" />
     </div>
-    <div className="flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg mt-1
-     md:mt-0 md:ml-1">
+    <div className="flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg mt-1">
       <span className="p-3 my-1 md:p-6 md:my-4 bg-slate-300 animate-pulse" />
-      <span className="p-3 my-1 px-28 mr-auto md:p-5 md:mr-20 md:mb-5 bg-slate-300 animate-pulse" />
-      <span className="p-3 my-1 px-20 mr-auto md:p-4 md:mr-32 md:my-10 bg-slate-300 animate-pulse" />
+      <span className="p-3 my-1 mr-auto md:p-5 md:mr-20 md:mb-5 bg-slate-300 animate-pulse" />
+      <span className="p-3 my-1 mr-auto md:p-4 md:mr-32 md:my-10 bg-slate-300 animate-pulse" />
     </div>
   </div>;
 
