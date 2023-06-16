@@ -32,6 +32,26 @@ const resolvePTagIcon = (tech) => {
   }
 };
 
+const resolvePTagColor = (tech) => {
+  switch (tech) {
+    case 'js': return 'bg-yellow-js text-slate-800';
+    case 'react': return 'bg-slate-600 text-blue-react';
+    case 'react-native': return 'bg-blue-react text-white';
+    case 'tailwind': return 'bg-blue-tailwind text-white';
+    case 'gatsby': return 'bg-purple-gatsby text-white';
+    case 'mui': return 'bg-blue-mui text-white';
+    case 'material': return 'bg-blue-400 text-white';
+    case 'arduino': return 'bg-green-arduino text-white';
+    case 'cpp': return 'bg-blue-cpp text-white';
+    case 'bash': return 'bg-gray-bash text-white';
+    case 'esp': return 'bg-gray-chip text-white';
+    case 'node': return 'bg-slate-50 text-green-500';
+    case 'express': return 'bg-slate-100 text-slate-500';
+    case 'mongodb': return 'bg-green-500 text-white';
+    default: return 'bg-red-700 text-white';
+  }
+};
+
 const PortfolioCardImage = ({ image, alt }) =>
   <img src={image} alt={alt} className="p-1 h-1/2 md:w-1/3 md:h-80 bg-white/90 border shadow-lg" />;
 
