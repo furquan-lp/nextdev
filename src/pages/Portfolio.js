@@ -68,7 +68,7 @@ const PortfolioCardTag = ({ tech, text }) =>
 
 const PortfolioCardText = ({ title, text, tags, code, link }) =>
   <div className="flex flex-col max-h-fit justify-around grow p-4 text-slate-700 bg-white/90 border shadow-lg mt-1">
-    <span className="flex flex-col">
+    <span className="flex flex-col md:my-2">
       <span className="my-2 md:my-6 font-abouttext text-3xl md:text-4xl">{title}</span>
       <span className="my-2 text-lg md:text-xl">{text}</span>
     </span>
