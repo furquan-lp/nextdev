@@ -71,14 +71,14 @@ const PortfolioCardText = ({ title, text, tags, code, link }) =>
     <span className="flex md:my-0 my-2 flex-wrap">
       {tags.map(t => <PortfolioCardTag tech={t.tech} text={t.text} />)}
     </span>
-    <span className="flex">
-      {code && <a href={code} className="flex items-center mr-2 p-1 text-lg md:text-xl border
+    <div className="flex md:flex-row-reverse md:mt-4">
+      {code && <a href={code} className="flex items-center p-1 text-lg md:text-xl border mr-1 md:mr-0
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
           active:bg-slate-500 transition-all duration-200">Source Code<FiExternalLink className="ml-1" /></a>}
-      {link && <a href={link} className="flex items-center mr-auto p-1 text-lg md:text-xl border
+      {link && <a href={link} className="flex items-center md:mr-auto p-1 text-lg md:text-xl border
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
           active:bg-slate-500 transition-all duration-200">Visit site<FiExternalLink className="ml-1" /></a>}
-    </span>
+    </div>
   </div>;
 
 const PortfolioCard = ({ image, title, text, tags, codeLink, siteLink }) =>
