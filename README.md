@@ -1,6 +1,10 @@
 # NEXTDEV
 Source code for my website at https://nextdev.in/
 
+![](screenshot-desktop.png)
+
+![](screenshot-mobile.png)
+
 ## Legal
 Copyright 2023 Syed Furquan Ahmad
 
