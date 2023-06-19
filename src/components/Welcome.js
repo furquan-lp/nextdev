@@ -3,7 +3,7 @@ import { FiChevronLeft, FiChevronRight, FiExternalLink } from "react-icons/fi";
 
 const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
   <div className="flex flex-col xl:flex-row text-slate-700">
-    <img className="xl:w-4/5 w-full md:h-96 h-auto" src={image}
+    <img className="2xl:w-full xl:w-4/5 w-full md:h-96 h-auto" src={image}
       alt={`${title} screenshot"`} />
     <div className="flex flex-col m-4 2xl:max-w-4xl xl:max-w-xl md:max-w-full justify-between">
       <div className="flex flex-col">
