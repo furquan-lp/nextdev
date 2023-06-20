@@ -2,16 +2,16 @@ import { Carousel } from "@material-tailwind/react";
 import { FiChevronLeft, FiChevronRight, FiExternalLink } from "react-icons/fi";
 
 const CarouselCard = ({ title, tags, text, buttonLink, buttonText, image }) =>
-  <div className="flex flex-col md:flex-row bg-white/90 text-slate-700">
-    <img className="md:w-6/12 w-full md:h-96 h-auto" src={image}
+  <div className="flex flex-col xl:flex-row text-slate-700">
+    <img className="2xl:w-full xl:w-4/5 w-full md:h-96 h-auto" src={image}
       alt={`${title} screenshot"`} />
-    <div className="flex flex-col m-4 max-w-3xl justify-between">
+    <div className="flex flex-col m-4 2xl:max-w-4xl xl:max-w-xl md:max-w-full justify-between">
       <div className="flex flex-col">
         <span className="font-cardtitle text-xl my-2 font-bold">
           {tags.map((e, i) => <span className="m-1 text-red-600" key={buttonLink + e + i}>#{e}</span>)}
         </span>
-        <span className="font-cardtitle text-3xl md:text-5xl">{title}</span>
-        <span className="text-xl md:text-2xl mt-2 font-light">{text}</span>
+        <span className="font-cardtitle text-3xl xl:text-3xl 2xl:md:text-5xl">{title}</span>
+        <span className="text-xl xl:text-xl 2xl:md:text-2xl mt-2 font-light">{text}</span>
       </div>
       <a href={buttonLink} className="flex mr-auto mt-1 text-lg md:text-xl p-1 md:p-1.5 border bg-gray-50
        border-slate-400 hover:underline hover:bg-slate-600 hover:text-white hover:border-slate-600
@@ -43,7 +43,7 @@ const CarouselButton = ({ onClick, nav }) =>
 const WelcomeCarousel = ({ carouselData, apiURL }) => {
   if (carouselData) {
     return (<Carousel
-      className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100"
+      className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100 bg-white/90"
       prevArrow={({ handlePrev }) => (
         <CarouselButton onClick={handlePrev} nav={0} />
       )}
@@ -60,7 +60,7 @@ const WelcomeCarousel = ({ carouselData, apiURL }) => {
     </Carousel>);
   } else {
     return (<Carousel
-      className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100"
+      className="h-4/6 my-1 mx-0.5 md:my-4 md:mx-0 overflow-hidden shadow-lg border border-slate-100 bg-white/90"
       prevArrow={({ handlePrev }) => (
         <CarouselButton onClick={handlePrev} nav={0} />
       )}

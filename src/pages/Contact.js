@@ -41,7 +41,7 @@ const ReachOut = () =>
     </span>
     <span className="flex items-center md:text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiMail className="self-center" /></span>
-      Email:&nbsp;<a href="mailto:nextdev.in@proton.me" className="text-slate-500">nextdev.in@proton.me</a>
+      Email:&nbsp;<a href="mailto:syed@nextdev.in" className="text-slate-500">syed@nextdev.in</a>
     </span>
     <span className="flex items-center md:text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiLinkedin className="self-center" /></span>
