@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import Bar from '../components/Bar';
 
 import { usePageTitle } from '../myHooks';
+import service from '../services';
 
 const SendButton = ({ active }) => {
   if (active) {
@@ -18,26 +19,36 @@ const SendButton = ({ active }) => {
   }
 }
 
-const ContactForm = ({ submit, buttonActive }) =>
-  <form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
+const ContactForm = ({ submit, buttonActive, mailMessage, setMailMessage }) => {
+  const handleInputsChange = (event) => {
+    const { name, value } = event.target;
+    setMailMessage({ ...mailMessage, [name]: event.target.value });
+  };
+
+  return (<form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
     onSubmit={submit}>
     <span className="font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6">Send me a message</span>
     <label for="name" className="text-lg md:text-2xl my-1 md:my-2 font-thin tracking-wide">Name:</label>
     <input type="text" name="name" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Enter your name' />
+     placeholder:text-slate-300" placeholder='Enter your name' value={mailMessage.name}
+      onChange={handleInputsChange} />
     <label for="email" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Email:</label>
     <input type="text" name="email" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Enter your email' />
+     placeholder:text-slate-300" placeholder='Enter your email' value={mailMessage.email}
+      onChange={handleInputsChange} />
     <label for="subject" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Subject:
     </label>
     <input type="text" name="subject" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Subject' />
+     placeholder:text-slate-300" placeholder='Subject' value={mailMessage.subject} onChange={handleInputsChange} />
     <label for="message" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Message:
     </label>
     <textarea name="message" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...' />
+     placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...' value={mailMessage.message}
+      onChange={handleInputsChange} />
     <SendButton active={buttonActive} />
-  </form>;
+  </form>
+  );
+}
 
 const ReachOut = () =>
   <div className="flex flex-col p-2 md:p-6 text-slate-700 bg-white/90 shadow-lg">
@@ -67,6 +78,9 @@ const ReachOut = () =>
 
 export const Contact = ({ backendVersion }) => {
   const [submitButton, setSubmitButton] = useState(true);
+  const [mailMessage, setMailMessage] = useState({
+    name: '', email: '', subject: '', message: ''
+  });
 
   usePageTitle('Contact');
   return (
@@ -75,10 +89,10 @@ export const Contact = ({ backendVersion }) => {
       <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
         <ContactForm submit={(e) => {
           e.preventDefault();
-          console.log('form submitted');
+          service.postMessage(mailMessage);
           setSubmitButton(false);
           setTimeout(() => setSubmitButton(true), 5000);
-        }} buttonActive={submitButton} />
+        }} buttonActive={submitButton} mailMessage={mailMessage} setMailMessage={setMailMessage} />
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
       </div>
