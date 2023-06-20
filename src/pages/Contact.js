@@ -1,32 +1,54 @@
-import { FiPhone, FiMail, FiLinkedin, FiMapPin } from 'react-icons/fi';
+import { useState, useEffect } from 'react';
+
+import { FiPhone, FiMail, FiLinkedin, FiMapPin, FiCheck } from 'react-icons/fi';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 import Bar from '../components/Bar';
 
 import { usePageTitle } from '../myHooks';
+import service from '../services';
 
-const ContactForm = ({ submit }) =>
-  <form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
+const SendButton = ({ active }) => {
+  if (active) {
+    return <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
+     hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>;
+  } else {
+    return <button type="none" className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
+    bg-slate-400"><FiCheck className="mr-0.5" />Message Sent</button>;
+  }
+};
+
+const ContactForm = ({ submit, buttonActive, mailMessage, setMailMessage }) => {
+  const handleInputsChange = (event) => {
+    const { name, value } = event.target;
+    setMailMessage({ ...mailMessage, [name]: event.target.value });
+  };
+
+  return (<form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
     onSubmit={submit}>
     <span className="font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6">Send me a message</span>
-    <label for="name" className="text-lg md:text-2xl my-1 md:my-2 font-thin tracking-wide">Name:</label>
+    <label htmlFor="name" className="text-lg md:text-2xl my-1 md:my-2 font-thin tracking-wide">Name:</label>
     <input type="text" name="name" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Enter your name' />
-    <label for="email" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Email:</label>
+     placeholder:text-slate-300" placeholder='Enter your name' value={mailMessage.name}
+      onChange={handleInputsChange} />
+    <label htmlFor="email" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Email:</label>
     <input type="text" name="email" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Enter your email' />
-    <label for="subject" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Subject:
+     placeholder:text-slate-300" placeholder='Enter your email' value={mailMessage.email}
+      onChange={handleInputsChange} />
+    <label htmlFor="subject" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Subject:
     </label>
     <input type="text" name="subject" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Subject' />
-    <label for="message" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Message:
+     placeholder:text-slate-300" placeholder='Subject' value={mailMessage.subject} onChange={handleInputsChange} />
+    <label htmlFor="message" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Message:
     </label>
     <textarea name="message" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...' />
-    <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
-     hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>
-  </form>;
+     placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...' value={mailMessage.message}
+      onChange={handleInputsChange} />
+    <SendButton active={buttonActive} />
+  </form>
+  );
+};
 
 const ReachOut = () =>
   <div className="flex flex-col p-2 md:p-6 text-slate-700 bg-white/90 shadow-lg">
@@ -55,12 +77,23 @@ const ReachOut = () =>
   </div>;
 
 export const Contact = ({ backendVersion }) => {
+  const [submitButton, setSubmitButton] = useState(true);
+  const [mailMessage, setMailMessage] = useState({
+    name: '', email: '', subject: '', message: ''
+  });
+
   usePageTitle('Contact');
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
       <TopBar page="contact" highlight={[false, false, false, false, true]} />
       <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
-        <ContactForm submit={(e) => { e.preventDefault(); console.log('form submitted'); }} />
+        <ContactForm submit={(e) => {
+          e.preventDefault();
+          service.postMessage(mailMessage);
+          setSubmitButton(false);
+          setMailMessage({ name: '', email: '', subject: '', message: '' });
+          setTimeout(() => setSubmitButton(true), 5000);
+        }} buttonActive={submitButton} mailMessage={mailMessage} setMailMessage={setMailMessage} />
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
       </div>
