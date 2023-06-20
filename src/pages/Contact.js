@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { FiPhone, FiMail, FiLinkedin, FiMapPin } from 'react-icons/fi';
+import { FiPhone, FiMail, FiLinkedin, FiMapPin, FiCheck } from 'react-icons/fi';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
@@ -13,8 +13,8 @@ const SendButton = ({ active }) => {
     return <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
      hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>;
   } else {
-    return <button type="none" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
-    bg-slate-400">Message Sent</button>;
+    return <button type="none" className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
+    bg-slate-400"><FiCheck className="mr-0.5" />Message Sent</button>;
   }
 }
 
