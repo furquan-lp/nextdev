@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import { FiPhone, FiMail, FiLinkedin, FiMapPin } from 'react-icons/fi';
 
 import TopBar from '../components/TopBar';
@@ -6,7 +8,17 @@ import Bar from '../components/Bar';
 
 import { usePageTitle } from '../myHooks';
 
-const ContactForm = ({ submit }) =>
+const SendButton = ({ active }) => {
+  if (active) {
+    return <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
+     hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>;
+  } else {
+    return <button type="none" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
+    bg-slate-400">Message Sent</button>;
+  }
+}
+
+const ContactForm = ({ submit, buttonActive }) =>
   <form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
     onSubmit={submit}>
     <span className="font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6">Send me a message</span>
@@ -24,8 +36,7 @@ const ContactForm = ({ submit }) =>
     </label>
     <textarea name="message" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...' />
-    <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
-     hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>
+    <SendButton active={buttonActive} />
   </form>;
 
 const ReachOut = () =>
@@ -55,12 +66,19 @@ const ReachOut = () =>
   </div>;
 
 export const Contact = ({ backendVersion }) => {
+  const [submitButton, setSubmitButton] = useState(true);
+
   usePageTitle('Contact');
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
       <TopBar page="contact" highlight={[false, false, false, false, true]} />
       <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
-        <ContactForm submit={(e) => { e.preventDefault(); console.log('form submitted'); }} />
+        <ContactForm submit={(e) => {
+          e.preventDefault();
+          console.log('form submitted');
+          setSubmitButton(false);
+          setTimeout(() => setSubmitButton(true), 5000);
+        }} buttonActive={submitButton} />
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
       </div>
