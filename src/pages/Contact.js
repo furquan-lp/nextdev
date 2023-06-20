@@ -17,7 +17,7 @@ const SendButton = ({ active }) => {
     return <button type="none" className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
     bg-slate-400"><FiCheck className="mr-0.5" />Message Sent</button>;
   }
-}
+};
 
 const ContactForm = ({ submit, buttonActive, mailMessage, setMailMessage }) => {
   const handleInputsChange = (event) => {
@@ -48,7 +48,7 @@ const ContactForm = ({ submit, buttonActive, mailMessage, setMailMessage }) => {
     <SendButton active={buttonActive} />
   </form>
   );
-}
+};
 
 const ReachOut = () =>
   <div className="flex flex-col p-2 md:p-6 text-slate-700 bg-white/90 shadow-lg">
