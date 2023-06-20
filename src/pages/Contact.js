@@ -91,6 +91,7 @@ export const Contact = ({ backendVersion }) => {
           e.preventDefault();
           service.postMessage(mailMessage);
           setSubmitButton(false);
+          setMailMessage({ name: '', email: '', subject: '', message: '' });
           setTimeout(() => setSubmitButton(true), 5000);
         }} buttonActive={submitButton} mailMessage={mailMessage} setMailMessage={setMailMessage} />
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
