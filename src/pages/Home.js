@@ -15,7 +15,7 @@ const Home = ({ carouselData, apiURL, backendVersion }) => {
       <div className="flex flex-col md:mx-24">
         <WelcomeCarousel carouselData={carouselData} apiURL={apiURL} />
         <Bar />
-        <HiBox />
+        <HiBox api={apiURL} />
         <Bar />
         <AboutSite />
       </div>
