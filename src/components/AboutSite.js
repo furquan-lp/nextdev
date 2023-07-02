@@ -7,24 +7,23 @@ const AboutSite = () =>
     <div className="flex flex-col md:items-center">
       This website is built using
       <div className="flex flex-col md:flex-row my-2 md:my-4">
-        <span className="flex flex-col border border-blue-react text-blue-react items-center m-1 md:mx-2">
+        <a href="https://reactjs.org/" className="flex flex-col border border-blue-react text-blue-react items-center m-1 md:mx-2 hover:bg-blue-react
+           hover:text-white hover:underline active:text-white active:bg-blue-react transition-all duration-200 ">
           <SiReact className="text-6xl m-2" />
-          <a href="https://reactjs.org/" className="border-t border-blue-react mt-1 p-2 text-xl hover:bg-blue-react
-           hover:text-white hover:underline active:text-white active:bg-blue-react transition-all duration-200">
-            ReactJS</a>
-        </span>
-        <span className="flex flex-col border border-blue-tailwind text-blue-tailwind items-center m-1 md:mx-2">
-          <SiTailwindcss className="text-6xl m-2" />
-          <a href="https://reactjs.org/" className="border-t border-blue-tailwind mt-1 p-2 text-xl
+          <span className="border-t border-blue-react mt-1 p-2 text-xl">ReactJS</span>
+        </a>
+        <a href="https://tailwindcss.com/" className="flex flex-col border border-blue-tailwind text-blue-tailwind items-center m-1 md:mx-2 
            hover:bg-blue-tailwind hover:text-white hover:underline active:text-white active:bg-blue-tailwind
-            transition-all duration-200">Tailwind</a>
-        </span>
-        <span className="flex flex-col border border-blue-mui text-blue-mui items-center m-1 md:mx-2">
-          <SiMaterialdesign className="text-6xl m-2" />
-          <a href="https://reactjs.org/" className="border-t border-blue-mui mt-1 p-2 text-xl hover:bg-blue-mui
+            transition-all duration-200">
+          <SiTailwindcss className="text-6xl m-2" />
+          <span className="border-t border-blue-tailwind mt-1 p-2 text-xl">Tailwind</span>
+        </a>
+        <a href="https://www.material-tailwind.com/" className="flex flex-col border border-blue-mui text-blue-mui items-center m-1 md:mx-2 hover:bg-blue-mui
            hover:text-white hover:underline active:text-white active:bg-blue-mui transition-all duration-200">
-            Material<br />Tailwind</a>
-        </span>
+          <SiMaterialdesign className="text-6xl m-2" />
+          <span className="border-t border-blue-mui mt-1 p-2 text-xl">
+            Material<br />Tailwind</span>
+        </a>
       </div>
     </div>
     Check the source code <a
