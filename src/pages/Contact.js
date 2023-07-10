@@ -21,7 +21,7 @@ const SendButton = ({ active }) => {
 };
 
 const ContactForm = () => {
-  const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
     service.postMessage({
@@ -44,7 +44,9 @@ const ContactForm = () => {
     <label htmlFor="email" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Email:</label>
     <input type="text" name="email" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300" placeholder='Enter your email'
-      {...register("email", { required: true, maxLength: 30 })} />
+      {...register("email", {
+        required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      })} />
     <label htmlFor="subject" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Subject:
     </label>
     <input type="text" name="subject" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
