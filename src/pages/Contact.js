@@ -20,13 +20,9 @@ const SendButton = ({ active }) => {
   }
 };
 
-const ContactForm = ({ buttonActive, mailMessage, setMailMessage }) => {
+const ContactForm = () => {
   const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm();
 
-  const handleInputsChange = (event) => {
-    const { name, value } = event.target;
-    setMailMessage({ ...mailMessage, [name]: event.target.value });
-  };
   const onSubmit = (data) => {
     service.postMessage({
       name: data.firstname, email: data.email, subject: data.subject, message: data.message
@@ -59,7 +55,7 @@ const ContactForm = ({ buttonActive, mailMessage, setMailMessage }) => {
     <textarea name="message" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...'
       {...register("message", { required: true, maxLength: 1000 })} />
-    <SendButton active={buttonActive} />
+    <SendButton active={true} />
   </form>
   );
 };
@@ -91,23 +87,12 @@ const ReachOut = () =>
   </div>;
 
 export const Contact = ({ backendVersion }) => {
-  const [submitButton, setSubmitButton] = useState(true);
-  const [mailMessage, setMailMessage] = useState({
-    name: '', email: '', subject: '', message: ''
-  });
-
   usePageTitle('Contact');
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
       <TopBar page="contact" highlight={[false, false, false, false, true]} />
       <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
-        <ContactForm submit={(e) => {
-          e.preventDefault();
-          service.postMessage(mailMessage);
-          setSubmitButton(false);
-          setMailMessage({ name: '', email: '', subject: '', message: '' });
-          setTimeout(() => setSubmitButton(true), 5000);
-        }} buttonActive={submitButton} mailMessage={mailMessage} setMailMessage={setMailMessage} />
+        <ContactForm />
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
       </div>
