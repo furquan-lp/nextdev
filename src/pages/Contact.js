@@ -40,7 +40,6 @@ const ContactForm = () => {
   };
 
   useEffect(() => {
-    console.log(Object.values(errors).length, ' and ', buttonActive)
     if (Object.values(errors).length > 0) {
       setButtonActive(-1);
       setTimeout(() => setButtonActive(1), 3000);
