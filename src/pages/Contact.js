@@ -10,21 +10,21 @@ import Bar from '../components/Bar';
 import { usePageTitle } from '../myHooks';
 import service from '../services';
 
-const SendButton = ({ active }) => {
-  if (active) {
+const SendButton = ({ state }) => {
+  if (state == 1) {
     return <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
      hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>;
-  } else if (!active) {
+  } else if (state == 0) {
     return <button type="none" className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
     bg-slate-400"><FiCheck className="mr-0.5" />Message Sent</button>;
   } else {
     return <button type="none" className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-red-100
-    bg-orange-400"><FiX className="mr-0.5" />Message Not Sent</button>;
+    bg-orange-600"><FiX className="mr-0.5" />Message Not Sent</button>;
   }
 };
 
 const ContactForm = () => {
-  const [buttonActive, setButtonActive] = useState(true);
+  const [buttonActive, setButtonActive] = useState(1);
   const { register, handleSubmit, setValue, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
@@ -35,9 +35,19 @@ const ContactForm = () => {
     setValue('email', '');
     setValue('subject', '');
     setValue('message', '');
-    setButtonActive(false);
-    setTimeout(() => setButtonActive(true), 5000);
+    setButtonActive(0);
+    setTimeout(() => setButtonActive(1), 5000);
   };
+
+  useEffect(() => {
+    console.log(Object.values(errors).length, ' and ', buttonActive)
+    if (Object.values(errors).length > 0) {
+      setButtonActive(-1);
+      setTimeout(() => setButtonActive(1), 2000);
+    } else if (buttonActive == -1 && Object.values(errors).length <= 0) {
+      setButtonActive(1);
+    }
+  }, [errors])
 
   return (<form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
     onSubmit={handleSubmit(onSubmit)}>
@@ -62,7 +72,7 @@ const ContactForm = () => {
     <textarea name="message" className={`bg-slate-50 p-1 md:p-2 border-b border-slate-300
      placeholder:text-slate-300 ${errors.message && 'outline outline-red-600'}`} rows="6" cols="33"
       placeholder='Hi...' {...register("message", { required: true, maxLength: 1000 })} />
-    <SendButton active={buttonActive} />
+    <SendButton state={buttonActive} />
   </form>
   );
 };
