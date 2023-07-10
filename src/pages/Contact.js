@@ -15,11 +15,11 @@ const SendButton = ({ state }) => {
     return <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
      hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>;
   } else if (state == 0) {
-    return <button type="none" className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
-    bg-slate-400"><FiCheck className="mr-0.5" />Message Sent</button>;
+    return <div className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100
+    bg-slate-400"><FiCheck className="mr-0.5" />Message Sent</div>;
   } else {
-    return <button type="none" className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-red-100
-    bg-orange-600"><FiX className="mr-0.5" />Message Not Sent</button>;
+    return <div className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-red-100
+    bg-orange-600"><FiX className="mr-0.5" />Message Not Sent</div>;
   }
 };
 
@@ -43,7 +43,7 @@ const ContactForm = () => {
     console.log(Object.values(errors).length, ' and ', buttonActive)
     if (Object.values(errors).length > 0) {
       setButtonActive(-1);
-      setTimeout(() => setButtonActive(1), 2000);
+      setTimeout(() => setButtonActive(1), 3000);
     } else if (buttonActive == -1 && Object.values(errors).length <= 0) {
       setButtonActive(1);
     }
