@@ -39,24 +39,24 @@ const ContactForm = () => {
     <span className="font-aboutfont text-4xl md:text-5xl mb-2 md:mb-6">Send me a message</span>
     <label htmlFor="name" className="text-lg md:text-2xl my-1 md:my-2 font-thin tracking-wide">Name:</label>
     <input type="text" name="name" className={`bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300 ${errors.firstname && 'focus:outline outline-red-600'}`}
+     placeholder:text-slate-300 ${errors.firstname && 'outline outline-red-600'}`}
       placeholder='Enter your name' {...register("firstname", { required: true, maxLength: 30 })} />
     <label htmlFor="email" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Email:</label>
-    <input type="text" name="email" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Enter your email'
+    <input type="text" name="email" className={`bg-slate-50 p-1 md:p-2 border-b border-slate-300
+     placeholder:text-slate-300 ${errors.email && 'outline outline-red-600'}`} placeholder='Enter your email'
       {...register("email", {
         required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       })} />
     <label htmlFor="subject" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Subject:
     </label>
-    <input type="text" name="subject" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" placeholder='Subject'
+    <input type="text" name="subject" className={`bg-slate-50 p-1 md:p-2 border-b border-slate-300
+     placeholder:text-slate-300 ${errors.subject && 'outline outline-red-600'}`} placeholder='Subject'
       {...register("subject", { required: true, maxLength: 128 })} />
     <label htmlFor="message" className="text-lg md:text-2xl my-1 md:my-2 mt-4 md:mt-8 font-thin tracking-wide">Message:
     </label>
-    <textarea name="message" className="bg-slate-50 p-1 md:p-2 border-b border-slate-300
-     placeholder:text-slate-300" rows="6" cols="33" placeholder='Hi...'
-      {...register("message", { required: true, maxLength: 1000 })} />
+    <textarea name="message" className={`bg-slate-50 p-1 md:p-2 border-b border-slate-300
+     placeholder:text-slate-300 ${errors.message && 'outline outline-red-600'}`} rows="6" cols="33"
+      placeholder='Hi...' {...register("message", { required: true, maxLength: 1000 })} />
     <SendButton active={true} />
   </form>
   );
