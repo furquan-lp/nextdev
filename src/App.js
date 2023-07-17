@@ -26,10 +26,11 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home carouselData={carousel} apiURL={service.API} backendVersion={backendVersion} />} />
+        <Route path="/" element={<Home carouselData={carousel} apiURL={service.STATIC_API}
+          backendVersion={backendVersion} />} />
         <Route path="*" element={<NotFound backendVersion={backendVersion} />} />
         <Route path="about" element={<About backendVersion={backendVersion} />} />
-        <Route path="portfolio" element={<Portfolio portfolio={portfolio} apiURL={service.API}
+        <Route path="portfolio" element={<Portfolio portfolio={portfolio} apiURL={service.STATIC_API}
           backendVersion={backendVersion} />} />
         <Route path="contact" element={<Contact backendVersion={backendVersion} />} />
         <Route path="blog" element={<BlogComingSoon />} />
