@@ -24,7 +24,7 @@ const GrayButton = ({ text, highlight }) => {
         {text}
       </span>);
   }
-}
+};
 
 const TopBarButton = ({ link, linktext, extern, highlight }) => {
   if (extern) {

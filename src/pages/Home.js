@@ -7,7 +7,7 @@ import AboutSite from '../components/AboutSite';
 
 import { usePageTitle } from '../myHooks';
 
-const Home = ({ carouselData, apiURL, backendVersion }) => {
+const Home = ({ carouselData, apiURL, backendInfo }) => {
   usePageTitle('Home');
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
@@ -19,7 +19,7 @@ const Home = ({ carouselData, apiURL, backendVersion }) => {
         <Bar />
         <AboutSite />
       </div>
-      <Footer version={backendVersion.version} />
+      <Footer version={backendInfo.version} backend={backendInfo.backendName} />
     </div>
   );
 };

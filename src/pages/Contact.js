@@ -11,10 +11,10 @@ import { usePageTitle } from '../myHooks';
 import service from '../services';
 
 const SendButton = ({ state }) => {
-  if (state == 1) {
+  if (state === 1) {
     return <button type="submit" className="p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-white bg-slate-500
      hover:text-slate-100 hover:bg-slate-400 transition-colors duration-200">Send Message</button>;
-  } else if (state == 0) {
+  } else if (state === 0) {
     return <div className="flex items-center p-1 md:p-2 mr-auto my-4 md:mt-10 md:text-lg text-slate-100 bg-slate-400
      select-none"><FiCheck className="mr-0.5" />Message Sent</div>;
   } else {
@@ -43,10 +43,10 @@ const ContactForm = () => {
     if (Object.values(errors).length > 0) {
       setButtonActive(-1);
       setTimeout(() => setButtonActive(1), 3000);
-    } else if (buttonActive == -1 && Object.values(errors).length <= 0) {
+    } else if (buttonActive === -1 && Object.values(errors).length <= 0) {
       setButtonActive(1);
     }
-  }, [errors])
+  }, [errors]);
 
   return (<form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
     onSubmit={handleSubmit(onSubmit)}>
@@ -102,7 +102,7 @@ const ReachOut = () =>
     </span>
   </div>;
 
-export const Contact = ({ backendVersion }) => {
+export const Contact = ({ backendInfo }) => {
   usePageTitle('Contact');
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
@@ -112,7 +112,7 @@ export const Contact = ({ backendVersion }) => {
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
       </div>
-      <Footer version={backendVersion.version} />
+      <Footer version={backendInfo.version} backend={backendInfo.backendName} />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 import { usePageTitle } from '../myHooks';
 
-export const NotFound = ({ backendVersion }) => {
+export const NotFound = ({ backendInfo }) => {
   usePageTitle('Page Not Found');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="home" highlight={[false, false, false, false, false]} />
@@ -17,6 +17,6 @@ export const NotFound = ({ backendVersion }) => {
       <Link to="/" className="flex text-xl md:text-3xl underline hover:no-underline hover:text-slate-500
        transition-colors duration-200"><FiArrowUpCircle className="self-center mr-1" />Back to home.</Link>
     </div>
-    <Footer version={backendVersion.version} />
+    <Footer version={backendInfo.version} backend={backendInfo.backendName} />
   </div>);
 };

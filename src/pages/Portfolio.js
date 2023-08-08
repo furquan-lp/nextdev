@@ -16,7 +16,7 @@ const resolvePTagIcon = (tech) => {
   switch (tech) {
     case 'js': return <SiJavascript />;
     case 'html': return <SiHtml5 />;
-    case 'css': return <SiCss3 />
+    case 'css': return <SiCss3 />;
     case 'react': return <SiReact />;
     case 'react-native': return <TbBrandReactNative />;
     case 'tailwind': return <SiTailwindcss />;
@@ -73,7 +73,7 @@ const PortfolioCardText = ({ title, text, tags, code, link }) =>
       <span className="my-2 text-lg md:text-xl">{text}</span>
     </span>
     <span className="flex md:my-0 my-2 flex-wrap">
-      {tags.map(t => <PortfolioCardTag tech={t.tech} text={t.text} />)}
+      {tags.map((t, i) => <PortfolioCardTag tech={t.tech} text={t.text} key={tags + 'ptags' + i} />)}
     </span>
     <div className="flex md:flex-row-reverse md:mt-4">
       {code && <a href={code} className="flex items-center p-1 text-lg md:text-xl border mr-1 md:mr-0 bg-gray-50
@@ -107,7 +107,7 @@ const PortfolioCardPlaceholder = () =>
     </div>
   </div>;
 
-export const Portfolio = ({ portfolio, apiURL, backendVersion }) => {
+export const Portfolio = ({ portfolio, apiURL, backendInfo }) => {
   usePageTitle('Portfolio');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
@@ -118,6 +118,6 @@ export const Portfolio = ({ portfolio, apiURL, backendVersion }) => {
         <PortfolioCard image={`${apiURL}${p.image}`} title={p.title} text={p.text} tags={p.tags} codeLink={p.repo}
           siteLink={p.site} key={p.id} />) : <PortfolioCardPlaceholder />}
     </div>
-    <Footer version={backendVersion.version} />
+    <Footer version={backendInfo.version} backend={backendInfo.backendName} />
   </div>);
-}
+};
