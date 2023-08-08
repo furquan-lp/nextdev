@@ -46,7 +46,7 @@ const ContactForm = () => {
     } else if (buttonActive == -1 && Object.values(errors).length <= 0) {
       setButtonActive(1);
     }
-  }, [errors])
+  }, [errors]);
 
   return (<form className="flex flex-col grow py-2 px-2 md:py-6 md:px-10 text-slate-700 bg-white/90 shadow-lg"
     onSubmit={handleSubmit(onSubmit)}>
