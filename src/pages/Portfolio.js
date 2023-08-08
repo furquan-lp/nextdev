@@ -120,4 +120,4 @@ export const Portfolio = ({ portfolio, apiURL, backendInfo }) => {
     </div>
     <Footer version={backendInfo.version} backend={backendInfo.backendName} />
   </div>);
-}
+};
