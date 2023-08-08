@@ -16,7 +16,7 @@ const resolvePTagIcon = (tech) => {
   switch (tech) {
     case 'js': return <SiJavascript />;
     case 'html': return <SiHtml5 />;
-    case 'css': return <SiCss3 />
+    case 'css': return <SiCss3 />;
     case 'react': return <SiReact />;
     case 'react-native': return <TbBrandReactNative />;
     case 'tailwind': return <SiTailwindcss />;
