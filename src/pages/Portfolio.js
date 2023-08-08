@@ -107,7 +107,7 @@ const PortfolioCardPlaceholder = () =>
     </div>
   </div>;
 
-export const Portfolio = ({ portfolio, apiURL, backendVersion }) => {
+export const Portfolio = ({ portfolio, apiURL, backendInfo }) => {
   usePageTitle('Portfolio');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
@@ -118,6 +118,6 @@ export const Portfolio = ({ portfolio, apiURL, backendVersion }) => {
         <PortfolioCard image={`${apiURL}${p.image}`} title={p.title} text={p.text} tags={p.tags} codeLink={p.repo}
           siteLink={p.site} key={p.id} />) : <PortfolioCardPlaceholder />}
     </div>
-    <Footer version={backendVersion.version} />
+    <Footer version={backendInfo.version} />
   </div>);
 }
