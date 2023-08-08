@@ -15,24 +15,24 @@ import service from './services';
 const App = () => {
   const [carousel, setCarousel] = useState();
   const [portfolio, setPortfolio] = useState();
-  const [backendVersion, setBackendVersion] = useState({ version: "unknown" });
+  const [backendInfo, setBackendInfo] = useState({ version: "unknown", backendName: undefined });
 
   useEffect(() => {
     service.initCarousel(setCarousel);
     service.initPortfolio(setPortfolio);
-    service.initBackendVersion(setBackendVersion);
+    service.initBackendInfo(setBackendInfo);
   }, []);
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home carouselData={carousel} apiURL={service.STATIC_API}
-          backendVersion={backendVersion} />} />
-        <Route path="*" element={<NotFound backendVersion={backendVersion} />} />
-        <Route path="about" element={<About backendVersion={backendVersion} />} />
+          backendInfo={backendInfo} />} />
+        <Route path="*" element={<NotFound backendInfo={backendInfo} />} />
+        <Route path="about" element={<About backendInfo={backendInfo} />} />
         <Route path="portfolio" element={<Portfolio portfolio={portfolio} apiURL={service.STATIC_API}
-          backendVersion={backendVersion} />} />
-        <Route path="contact" element={<Contact backendVersion={backendVersion} />} />
+          backendInfo={backendInfo} />} />
+        <Route path="contact" element={<Contact backendInfo={backendInfo} />} />
         <Route path="blog" element={<BlogComingSoon />} />
       </Routes>
     </BrowserRouter>
