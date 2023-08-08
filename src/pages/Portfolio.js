@@ -118,6 +118,6 @@ export const Portfolio = ({ portfolio, apiURL, backendInfo }) => {
         <PortfolioCard image={`${apiURL}${p.image}`} title={p.title} text={p.text} tags={p.tags} codeLink={p.repo}
           siteLink={p.site} key={p.id} />) : <PortfolioCardPlaceholder />}
     </div>
-    <Footer version={backendInfo.version} />
+    <Footer version={backendInfo.version} backend={backendInfo.backendName} />
   </div>);
 }

@@ -99,6 +99,6 @@ export const About = ({ backendInfo }) => {
           model to solve procedurally generated mazes.</span>
       </div>
     </div>
-    <Footer version={backendInfo.version} />
+    <Footer version={backendInfo.version} backend={backendInfo.backendName} />
   </div>);
 };

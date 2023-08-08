@@ -112,7 +112,7 @@ export const Contact = ({ backendInfo }) => {
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
       </div>
-      <Footer version={backendInfo.version} />
+      <Footer version={backendInfo.version} backend={backendInfo.backendName} />
     </div>
   );
 };

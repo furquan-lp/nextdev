@@ -19,7 +19,7 @@ const Home = ({ carouselData, apiURL, backendInfo }) => {
         <Bar />
         <AboutSite />
       </div>
-      <Footer version={backendInfo.version} />
+      <Footer version={backendInfo.version} backend={backendInfo.backendName} />
     </div>
   );
 };
