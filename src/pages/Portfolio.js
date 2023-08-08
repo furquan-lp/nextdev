@@ -73,7 +73,7 @@ const PortfolioCardText = ({ title, text, tags, code, link }) =>
       <span className="my-2 text-lg md:text-xl">{text}</span>
     </span>
     <span className="flex md:my-0 my-2 flex-wrap">
-      {tags.map(t => <PortfolioCardTag tech={t.tech} text={t.text} />)}
+      {tags.map((t, i) => <PortfolioCardTag tech={t.tech} text={t.text} key={tags + 'ptags' + i} />)}
     </span>
     <div className="flex md:flex-row-reverse md:mt-4">
       {code && <a href={code} className="flex items-center p-1 text-lg md:text-xl border mr-1 md:mr-0 bg-gray-50
