@@ -1,10 +1,11 @@
 import { FiExternalLink } from 'react-icons/fi';
 import {
   SiJavascript, SiHtml5, SiCss3, SiReact, SiTailwindcss, SiGatsby, SiMui, SiMaterialdesign, SiArduino, SiCplusplus,
-  SiGnubash, SiNodedotjs, SiExpress, SiMongodb
+  SiGnubash, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiSqlite, SiTypescript, SiNextdotjs, SiWebassembly
 } from 'react-icons/si';
 import { TbBrandReactNative, TbQuestionMark } from 'react-icons/tb';
 import { BiMicrochip } from 'react-icons/bi';
+import { AiOutlineConsoleSql } from 'react-icons/ai';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
@@ -15,6 +16,7 @@ import { usePageTitle } from '../myHooks';
 const resolvePTagIcon = (tech) => {
   switch (tech) {
     case 'js': return <SiJavascript />;
+    case 'ts': return <SiTypescript />;
     case 'html': return <SiHtml5 />;
     case 'css': return <SiCss3 />;
     case 'react': return <SiReact />;
@@ -30,6 +32,11 @@ const resolvePTagIcon = (tech) => {
     case 'node': return <SiNodedotjs />;
     case 'express': return <SiExpress />;
     case 'mongodb': return <SiMongodb />;
+    case 'postgres': return <SiPostgresql />;
+    case 'sqlite': return <SiSqlite />;
+    case 'sql': return <AiOutlineConsoleSql />;
+    case 'next': return <SiNextdotjs />;
+    case 'wasm': return <SiWebassembly />;
     default: return <TbQuestionMark />;
   }
 };
@@ -37,6 +44,7 @@ const resolvePTagIcon = (tech) => {
 const resolvePTagColor = (tech) => {
   switch (tech) {
     case 'js': return 'bg-yellow-js text-slate-800';
+    case 'ts': return 'bg-sky-600 text-white';
     case 'html': return 'bg-orange-500 text-white';
     case 'css': return 'bg-blue-600 text-white';
     case 'react': return 'bg-slate-600 text-blue-react';
@@ -52,6 +60,11 @@ const resolvePTagColor = (tech) => {
     case 'node': return 'bg-slate-50 text-green-500';
     case 'express': return 'bg-slate-100 text-slate-500';
     case 'mongodb': return 'bg-green-500 text-white';
+    case 'postgres': return 'bg-teal-600 text-white';
+    case 'sqlite': return 'bg-sky-200 text-blue-800';
+    case 'sql': return 'bg-cyan-500 text-white';
+    case 'next': return 'bg-slate-700 text-white';
+    case 'wasm': return 'bg-indigo-600 text-white';
     default: return 'bg-red-700 text-white';
   }
 };
