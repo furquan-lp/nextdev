@@ -45,7 +45,7 @@ const TopBarLinks = ({ navToggled, highlight }) => {
       <TopBarButton link="/" linktext="Home" highlight={highlight[0]} />
       <TopBarButton link="/about" linktext="About" highlight={highlight[1]} />
       <TopBarButton link="/blog" linktext="Blog" highlight={highlight[2]} />
-      <TopBarButton link="/portfolio" linktext="Portfolio" highlight={highlight[3]} />
+      <TopBarButton link="/portfolio" linktext="Projects" highlight={highlight[3]} />
       <TopBarButton link="/contact" linktext="Contact" highlight={highlight[4]} />
     </nav>;
 };

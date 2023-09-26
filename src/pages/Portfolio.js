@@ -108,7 +108,7 @@ const PortfolioCardPlaceholder = () =>
   </div>;
 
 export const Portfolio = ({ portfolio, apiURL, backendInfo }) => {
-  usePageTitle('Portfolio');
+  usePageTitle('Projects');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="portfolio" highlight={[false, false, false, true, false]} />
     <div className="flex flex-col mx-1 lg:mx-24 xl:mx-80">
