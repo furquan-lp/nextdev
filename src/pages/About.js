@@ -35,7 +35,7 @@ export const About = ({ backendInfo }) => {
               </a>
             </Tooltip>
             <Tooltip content="Contact my email">
-              <a href="mailto:furquan@pm.me" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100
+              <a href="mailto:syed@nextdev.in" className="p-2 border mx-2 md:mx-0 hover:bg-gray-100
              hover:border-gray-100 rounded-full justify-center items-center transition-all duration-200">
                 <FiMail />
               </a>
