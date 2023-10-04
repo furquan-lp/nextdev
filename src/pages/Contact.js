@@ -107,7 +107,7 @@ export const Contact = ({ backendInfo }) => {
   return (
     <div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
       <TopBar page="contact" highlight={[false, false, false, false, true]} />
-      <div className="flex flex-col md:flex-row md:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
+      <div className="flex flex-col md:flex-row xl:mx-28 2xl:mx-60 md:my-6 my-2 mx-1 md:p-6 md:py-10">
         <ContactForm />
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
         <ReachOut />
