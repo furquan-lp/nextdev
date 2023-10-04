@@ -14,11 +14,12 @@ export const About = ({ backendInfo }) => {
   usePageTitle('About');
   return (<div className="bg-minimal-react bg-contain bg-center bg-no-repeat min-h-screen">
     <TopBar page="about" highlight={[false, true, false, false, false]} />
-    <div className="flex flex-col md:mx-60 my-2 text-slate-800">
+    <div className="flex flex-col md:mx-6 xl:mx-32 2xl:mx-60 my-2 text-slate-800">
       <div className="flex flex-col md:flex-row md:mb-2 bg-white/95">
-        <div className="flex flex-col justify-center items-center md:items-stretch md:justify-around grow py-2
+        <div className="flex flex-col justify-center items-center md:items-stretch md:justify-around py-2
          md:px-1 md:py-1 mx-1 md:mr-px md:ml-0 border shadow-lg">
-          <img src="/me.webp" className="rounded-lg w-3/4 md:w-full mb-2 md:mb-0" alt="a profile photograph of myself" />
+          <img src="/me.webp" className="rounded-lg w-3/4 md:w-full h-max mb-2 md:mb-0"
+            alt="a profile photograph of me" />
           <div className="flex shrink my-0 items-center justify-around">
             <Tooltip content="Check my LinkedIn">
               <a href="https://www.linkedin.com/in/syed-ahmad-nextdev/" className="p-2 border mx-2 md:mx-0
@@ -42,14 +43,14 @@ export const About = ({ backendInfo }) => {
           </div>
         </div>
         <div className="block md:hidden mt-2 mb-0 md:my-0"><Bar /></div>
-        <div className="border shadow-lg mx-1 my-2 md:ml-px md:mr-0 md:my-0 p-1 max-w-5xl">
+        <div className="border shadow-lg mx-1 my-2 md:ml-px md:mr-0 md:my-0 p-1 md:max-w-xl xl:max-w-3xl 2xl:max-w-5xl">
           <div className="flex font-aboutfont text-4xl md:text-5xl justify-center">About Me</div>
           <div className="flex flex-col justify-between text-xl md:text-2xl py-2 font-abouttext">
             <div className="my-1">Hello! I'm Syed Ahmad and I like to build stuff on the web. Ever since I remember
               coming into contact with computers and had an idea of how they worked, I have loved to program.</div>
             <div className="my-1">So far I'm learning and have worked with various web technologies and frameworks like
               Next.js, React, React Native, Tailwind CSS, etc. (see further down below for more on that). And I am
-              learning everyday, furthering my skills so I can be a better full stack developer. I'm based in Kolkata,
+              learning everyday, furthering my skills so I can be a better full-stack developer. I'm based in Kolkata,
               India (though open to relocating, given the opportunity) and currently pursuing a bachelor's degree in
               engineering.</div>
 
