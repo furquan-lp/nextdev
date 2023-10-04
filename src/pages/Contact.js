@@ -98,7 +98,7 @@ const ReachOut = () =>
     </span>
     <span className="flex items-center md:text-lg my-2 md:my-4">
       <span className="mx-4 p-3 border rounded-full md:text-xl bg-white"><FiMapPin className="self-center" /></span>
-      Location:&nbsp;<span className="font-light">North 24 Parganas, Kolkata, West Bengal, India</span>
+      Location:&nbsp;<span className="font-light ml-1 md:ml-0">North 24 Parganas, Kolkata, West Bengal, India</span>
     </span>
   </div>;
 
