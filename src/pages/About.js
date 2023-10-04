@@ -74,8 +74,8 @@ export const About = ({ backendInfo }) => {
           development in general.</span>
         <span className="text-xl md:text-2xl my-2">I've also worked with <u>Gatsby</u> having used it in my <i>The Chip
           Tinker Project (TCTP)</i> blog which I ran for a year. Gatsby is a nice static site generator (SSG) but it's
-          not simple to use and I had to learn GraphQL to work with it. I've since switched to using <u>Astro.build</u>
-          &nbsp;for new projects.</span>
+          not simple to use and I had to learn GraphQL to work with it. I've since switched to
+          using <u>Next.js</u> or <u>Astro.build</u> for new static site projects.</span>
         <span className="text-xl md:text-2xl my-2">On the backend side, I've worked with Node.js and Flask and in
           databases I've used both PostgreSQL and MongoDB for my projects.</span>
         <span className="text-xl md:text-2xl my-2">On the embedded side, I've worked with microcontrollers like Arduino,
