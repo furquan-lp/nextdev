@@ -9,7 +9,7 @@ const HiBox = ({ staticAPI }) =>
      md:py-10 grow font-hifont tracking-wide bg-white/95 shadow-lg border border-slate-100">
       <span className="my-1">Hi,</span>
       <span className="my-1">I'm Syed</span>
-      <span className="my-1">Web Developer</span>
+      <span className="my-1">Fullstack Developer</span>
       <a href={`${staticAPI}resume.pdf`} className="flex items-center mt-5 mr-auto p-1 text-xl md:text-2xl border
          border-slate-400 bg-slate-200 hover:underline hover:text-white hover:bg-slate-600 active:text-white
           active:bg-slate-500 transition-all duration-200">Résumé <FiArrowRight /></a>
