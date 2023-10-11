@@ -1,11 +1,13 @@
 import { FiExternalLink } from 'react-icons/fi';
 import {
   SiJavascript, SiHtml5, SiCss3, SiReact, SiTailwindcss, SiGatsby, SiMui, SiMaterialdesign, SiArduino, SiCplusplus,
-  SiGnubash, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiSqlite, SiTypescript, SiNextdotjs, SiWebassembly
+  SiGnubash, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiSqlite, SiTypescript, SiNextdotjs, SiWebassembly,
+  SiSpringboot,
 } from 'react-icons/si';
 import { TbBrandReactNative, TbQuestionMark } from 'react-icons/tb';
 import { BiMicrochip } from 'react-icons/bi';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
+import { FaJava } from 'react-icons/fa6';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
@@ -37,6 +39,8 @@ const resolvePTagIcon = (tech) => {
     case 'sql': return <AiOutlineConsoleSql />;
     case 'next': return <SiNextdotjs />;
     case 'wasm': return <SiWebassembly />;
+    case 'java': return <FaJava />;
+    case 'spring-boot': return <SiSpringboot />;
     default: return <TbQuestionMark />;
   }
 };
@@ -65,6 +69,8 @@ const resolvePTagColor = (tech) => {
     case 'sql': return 'bg-cyan-500 text-white';
     case 'next': return 'bg-slate-700 text-white';
     case 'wasm': return 'bg-indigo-600 text-white';
+    case 'java': return 'bg-amber-500 text-white';
+    case 'spring-boot': return 'bg-lime-600 text-slate-50';
     default: return 'bg-red-700 text-white';
   }
 };

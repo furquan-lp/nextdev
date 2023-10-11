@@ -1,2 +1,4 @@
 .eslintrc.js
 build/
+tailwind.config.js
+postcss.config.js
